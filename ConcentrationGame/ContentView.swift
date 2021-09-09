@@ -30,10 +30,18 @@ struct CardView: View {
             if card.isFaceUp {
                 RoundedRectangle(cornerRadius: 10)
                     .fill(.white)
+                    .aspectRatio(CGSize(width: 2, height: 3), contentMode: .fit)
                 RoundedRectangle(cornerRadius: 10)
                     .stroke()
-                Text(card.content)
-                    .font(.largeTitle)
+                    .aspectRatio(CGSize(width: 2, height: 3), contentMode: .fit)
+                if card.totalPairs > 4 {
+                    Text(card.content)
+                        .font(.title)
+                }
+                else {
+                    Text(card.content)
+                        .font(.largeTitle)
+                }
             }
             else {
                 RoundedRectangle(cornerRadius: 10)
