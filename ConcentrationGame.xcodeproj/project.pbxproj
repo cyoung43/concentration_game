@@ -14,7 +14,7 @@
 		B278BEB726E9928A00BA7893 /* ConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278BEB626E9928A00BA7893 /* ConcentrationGame.swift */; };
 		B278BEB926E9938D00BA7893 /* EmojiConcentrationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278BEB826E9938D00BA7893 /* EmojiConcentrationGame.swift */; };
 		B27B41A326EC3DD900DA34EF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B41A226EC3DD900DA34EF /* CardView.swift */; };
-		B27B41A526EC439500DA34EF /* ArrayIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B41A426EC439500DA34EF /* ArrayIndex.swift */; };
+		B27B41A526EC439500DA34EF /* ArrayIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,7 @@
 		B278BEB626E9928A00BA7893 /* ConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGame.swift; sourceTree = "<group>"; };
 		B278BEB826E9938D00BA7893 /* EmojiConcentrationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiConcentrationGame.swift; sourceTree = "<group>"; };
 		B27B41A226EC3DD900DA34EF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		B27B41A426EC439500DA34EF /* ArrayIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayIndex.swift; sourceTree = "<group>"; };
+		B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayIdentifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		B27B41A126EC3D0400DA34EF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				B27B41A426EC439500DA34EF /* ArrayIndex.swift */,
+				B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -181,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B27B41A526EC439500DA34EF /* ArrayIndex.swift in Sources */,
+				B27B41A526EC439500DA34EF /* ArrayIdentifiable.swift in Sources */,
 				B278BEB926E9938D00BA7893 /* EmojiConcentrationGame.swift in Sources */,
 				B278BEB726E9928A00BA7893 /* ConcentrationGame.swift in Sources */,
 				B278BEAB26E98ACD00BA7893 /* EmojiGameView.swift in Sources */,

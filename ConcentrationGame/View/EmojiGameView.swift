@@ -10,20 +10,26 @@ import SwiftUI
 struct EmojiGameView: View {
     @ObservedObject var emojiGame: EmojiConcentrationGame
     
-    var fontSize: Font {
-        emojiGame.cards.count < 10 ? .largeTitle : .body
+    private func columns(for size: CGSize) -> [GridItem] {
+        Array(repeating: GridItem(.flexible()), count: Int(size.width / Constants.desiredCardWidth))
     }
     
     var body: some View {
-        HStack {
-            ForEach(emojiGame.cards) { card in
-                CardView(card: card, emojiFont: fontSize).onTapGesture {
-                    emojiGame.choose(card)
+        GeometryReader { geometry in
+            LazyVGrid(columns: columns(for: geometry.size)) {
+                ForEach(emojiGame.cards) { card in
+                    CardView(card: card).onTapGesture {
+                        emojiGame.choose(card)
+                    }
                 }
             }
+            .padding()
+            .foregroundColor(.blue)
         }
-        .padding()
-        .foregroundColor(.blue)
+    }
+    
+    private struct Constants {
+        static let desiredCardWidth: CGFloat = 125
     }
 }
 
