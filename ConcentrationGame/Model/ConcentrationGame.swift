@@ -10,6 +10,7 @@ import Foundation
 struct ConcentrationGame<CardContent> where CardContent: Equatable {
     var cards: Array<Card>
     var indexOfTheOneAndOnlyFaceUpCard: Int?
+    var score: Int = 0
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
@@ -32,11 +33,19 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
                 if cards[potentialMatchIndex].content == cards[chosenIndex].content {
                     cards[chosenIndex].isMatched = true
                     cards[chosenIndex].isMatched = true
+                    
+                    score += 2
+                }
+                else {
+                    score -= 1
                 }
                 
                 indexOfTheOneAndOnlyFaceUpCard = nil
+                print(score)
             }
+            
             else {
+                
                 for index in cards.indices {
                     cards[index].isFaceUp = false
                 }

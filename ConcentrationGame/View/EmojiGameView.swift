@@ -25,7 +25,9 @@ struct EmojiGameView: View {
             }
             .padding()
             .foregroundColor(.blue)
+            
         }
+        Text("\(emojiGame.score)")
     }
     
     private struct Constants {
