@@ -17,6 +17,17 @@ struct EmojiGameView: View {
     var body: some View {
         GeometryReader { geometry in
             LazyVGrid(columns: columns(for: geometry.size)) {
+                Text("Score: \(emojiGame.score)")
+                    .font(.largeTitle)
+                    .multilineTextAlignment(.center)
+                Button(action: { emojiGame.newGame() }) {
+                    Text("new Game")
+                        .padding()
+                        .font(.body)
+                }
+                .background(
+                    Capsule().stroke(lineWidth: 2))
+                
                 ForEach(emojiGame.cards) { card in
                     CardView(card: card).onTapGesture {
                         emojiGame.choose(card)
@@ -27,7 +38,6 @@ struct EmojiGameView: View {
             .foregroundColor(.blue)
             
         }
-        Text("\(emojiGame.score)")
     }
     
     private struct Constants {

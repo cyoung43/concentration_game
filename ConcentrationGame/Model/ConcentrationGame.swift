@@ -27,12 +27,13 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     
     mutating func choose(_ card: Card) {
         if let chosenIndex = cards.firstIndex(matching: card),
-           !cards[chosenIndex].isFaceUp, !cards[chosenIndex].isMatched {
+           !cards[chosenIndex].isFaceUp,
+           !cards[chosenIndex].isMatched {
             
             if let potentialMatchIndex = indexOfTheOneAndOnlyFaceUpCard {
                 if cards[potentialMatchIndex].content == cards[chosenIndex].content {
                     cards[chosenIndex].isMatched = true
-                    cards[chosenIndex].isMatched = true
+                    cards[potentialMatchIndex].isMatched = true
                     
                     score += 2
                 }
