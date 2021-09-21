@@ -13,7 +13,7 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                if !card.isMatched {
+                if !card.isMatched || card.isFaceUp {
                     if card.isFaceUp {
                         RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
                             .fill(.white)
@@ -26,6 +26,7 @@ struct CardView: View {
                         RoundedRectangle(cornerRadius: 10)
                     }
                 }
+                
             }
         }
         .aspectRatio(2/3, contentMode: .fit)

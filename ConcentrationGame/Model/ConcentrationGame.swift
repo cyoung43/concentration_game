@@ -8,9 +8,9 @@
 import Foundation
 
 struct ConcentrationGame<CardContent> where CardContent: Equatable {
-    var cards: Array<Card>
-    var indexOfTheOneAndOnlyFaceUpCard: Int?
-    var score: Int = 0
+    private(set) var cards: Array<Card>
+    private var indexOfTheOneAndOnlyFaceUpCard: Int?
+    private(set)  var score: Int = 0
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
