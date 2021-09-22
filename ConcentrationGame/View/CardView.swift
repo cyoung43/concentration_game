@@ -32,7 +32,6 @@ struct CardView: View {
     // MARK: - Drawing constants
     
     private struct Constants {
-        static let cardCornerRadius = 10.0
         static let fontScaleFactor = 0.75
     }
 }
