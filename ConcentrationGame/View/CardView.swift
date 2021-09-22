@@ -19,6 +19,8 @@ struct CardView: View {
                             .fill(.white)
                         RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
                             .stroke()
+                        Pie(startAngle: Angle(degrees: 360 - 90), endAngle: Angle(degrees: 120 - 90), clockwise: true)
+                            .opacity(0.4)
                         Text(card.content)
                             .font(systemFont(for: geometry.size))
                     }
@@ -46,7 +48,8 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: ConcentrationGame<String>.Card(content: "🥝", id: 13))
+        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "🥝"))
+            .foregroundColor(.blue)
             .padding(50)
     }
 }

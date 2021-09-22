@@ -9,8 +9,9 @@ import Foundation
 
 struct ConcentrationGame<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
-    private var indexOfTheOneAndOnlyFaceUpCard: Int?
     private(set)  var score: Int = 0
+    
+    private var indexOfTheOneAndOnlyFaceUpCard: Int?
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
@@ -18,8 +19,8 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         for pairIndex in 0 ..< numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)
             
-            cards.append(Card(content: content, id: pairIndex * 2))
-            cards.append(Card(content: content, id: pairIndex * 2 + 1))
+            cards.append(Card(content: content))
+            cards.append(Card(content: content))
         }
         
         cards.shuffle()
@@ -62,6 +63,6 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         var isFaceUp = false
         var isMatched = false
         var content: CardContent
-        var id: Int
+        var id = UUID()
     }
 }

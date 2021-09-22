@@ -31,12 +31,13 @@ struct EmojiGameView: View {
                 .padding()
                 .foregroundColor(.blue)
             }
+            .navigationTitle("Concentration")
+            .navigationBarItems(leading: Button("New Game") {
+                emojiGame.newGame()
+                }, trailing: Text("Score: \(emojiGame.score)"))
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .navigationTitle("Concentration")
-        .navigationBarItems(leading: Button("New Game") {
-            emojiGame.newGame()
-        }, trailing: Text("Score: \(emojiGame.score)"))
-        .navigationBarTitleDisplayMode(.inline)
+        
     }
     
     private struct Constants {
