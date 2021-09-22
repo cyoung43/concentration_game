@@ -14,22 +14,13 @@ struct CardView: View {
         GeometryReader { geometry in
             ZStack {
                 if !card.isMatched || card.isFaceUp {
-                    if card.isFaceUp {
-                        RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
-                            .fill(.white)
-                        RoundedRectangle(cornerRadius: Constants.cardCornerRadius)
-                            .stroke()
-                        Pie(startAngle: Angle(degrees: 360 - 90), endAngle: Angle(degrees: 120 - 90), clockwise: true)
-                            .opacity(0.4)
-                        Text(card.content)
-                            .font(systemFont(for: geometry.size))
-                    }
-                    else {
-                        RoundedRectangle(cornerRadius: 10)
-                    }
+                    Pie(startAngle: Angle(degrees: 360 - 90), endAngle: Angle(degrees: 120 - 90), clockwise: true)
+                        .opacity(0.4)
+                    Text(card.content)
+                        .font(systemFont(for: geometry.size))
                 }
-                
             }
+            .cardify(isFaceUp: card.isFaceUp)
         }
         .aspectRatio(2/3, contentMode: .fit)
     }
@@ -51,5 +42,11 @@ struct CardView_Previews: PreviewProvider {
         CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "🥝"))
             .foregroundColor(.blue)
             .padding(50)
+    }
+}
+
+extension View {
+    func cardify(isFaceUp: Bool) -> some View {
+        modifier(Cardify(isFaceUp: isFaceUp))
     }
 }

@@ -37,7 +37,6 @@ struct EmojiGameView: View {
                 }, trailing: Text("Score: \(emojiGame.score)"))
             .navigationBarTitleDisplayMode(.inline)
         }
-        
     }
     
     private struct Constants {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B24DC8F526FADABB0064FD28 /* ArrayOnly.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC8F426FADABB0064FD28 /* ArrayOnly.swift */; };
+		B24DC8F726FB791A0064FD28 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24DC8F626FB791A0064FD28 /* Cardify.swift */; };
 		B255342B26FA962F00B8FE04 /* Pie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B255342A26FA962E00B8FE04 /* Pie.swift */; };
 		B278BEA926E98ACD00BA7893 /* ConcentrationGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278BEA826E98ACD00BA7893 /* ConcentrationGameApp.swift */; };
 		B278BEAB26E98ACD00BA7893 /* EmojiGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B278BEAA26E98ACD00BA7893 /* EmojiGameView.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		B24DC8F426FADABB0064FD28 /* ArrayOnly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayOnly.swift; sourceTree = "<group>"; };
+		B24DC8F626FB791A0064FD28 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
 		B255342A26FA962E00B8FE04 /* Pie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pie.swift; sourceTree = "<group>"; };
 		B278BEA526E98ACD00BA7893 /* ConcentrationGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcentrationGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B278BEA826E98ACD00BA7893 /* ConcentrationGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationGameApp.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				B278BEAA26E98ACD00BA7893 /* EmojiGameView.swift */,
 				B27B41A226EC3DD900DA34EF /* CardView.swift */,
 				B255342A26FA962E00B8FE04 /* Pie.swift */,
+				B24DC8F626FB791A0064FD28 /* Cardify.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				B27B41A526EC439500DA34EF /* ArrayIdentifiable.swift in Sources */,
 				B278BEB926E9938D00BA7893 /* EmojiConcentrationGame.swift in Sources */,
 				B278BEB726E9928A00BA7893 /* ConcentrationGame.swift in Sources */,
+				B24DC8F726FB791A0064FD28 /* Cardify.swift in Sources */,
 				B24DC8F526FADABB0064FD28 /* ArrayOnly.swift in Sources */,
 				B278BEAB26E98ACD00BA7893 /* EmojiGameView.swift in Sources */,
 				B255342B26FA962F00B8FE04 /* Pie.swift in Sources */,
