@@ -11,7 +11,7 @@ struct EmojiGameView: View {
     @ObservedObject var emojiGame: EmojiConcentrationGame
     
     private func columns(for size: CGSize) -> [GridItem] {
-        Array(repeating: GridItem(.flexible()), count: Int(size.width / Constants.desiredCardWidth))
+        Array(repeating: GridItem(.fixed(Constants.desiredCardWidth)), count: Int(size.width / Constants.desiredCardWidth))
     }
     
     var body: some View {
@@ -22,7 +22,9 @@ struct EmojiGameView: View {
                         LazyVGrid(columns: columns(for: geometry.size)) {
                             ForEach(emojiGame.cards) { card in
                                 CardView(card: card).onTapGesture {
-                                    emojiGame.choose(card)
+                                    withAnimation(.linear(duration: 0.5)) {
+                                        emojiGame.choose(card)
+                                    }
                                 }
                             }
                         }
@@ -33,14 +35,16 @@ struct EmojiGameView: View {
             }
             .navigationTitle("Concentration")
             .navigationBarItems(leading: Button("New Game") {
-                emojiGame.newGame()
+                withAnimation {
+                    emojiGame.newGame()
+                }
                 }, trailing: Text("Score: \(emojiGame.score)"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }
     
     private struct Constants {
-        static let desiredCardWidth: CGFloat = 125
+        static let desiredCardWidth: CGFloat = 110
     }
 }
 
