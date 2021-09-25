@@ -39,20 +39,16 @@ struct EmojiGameView: View {
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
-                ScrollView {
-                    VStack {
-                        LazyVGrid(columns: columns(for: geometry.size)) {
-                            ForEach(emojiGame.cards) { card in
-                                CardView(card: card).onTapGesture {
-                                    withAnimation(.linear(duration: 0.5)) {
-                                        emojiGame.choose(card)
-                                    }
-                                }
+                AspectVGrid(items: emojiGame.cards, aspectRatio: 2/3) { card in
+                    CardView(card: card)
+                        .padding(geometry.size.width * 0.01)
+                        .onTapGesture {
+                            withAnimation(.linear(duration: 0.5)) {
+                                emojiGame.choose(card)
                             }
                         }
-                    }
                 }
-                .padding()
+                .padding(geometry.size.width * 0.01)
                 .foregroundColor(.blue)
             }
             .navigationTitle("Concentration")
@@ -60,7 +56,7 @@ struct EmojiGameView: View {
                 withAnimation {
                     emojiGame.newGame()
                 }
-                }, trailing: Text("Score: \(emojiGame.score)"))
+            }, trailing: Text("Score: \(emojiGame.score)"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }
