@@ -64,6 +64,7 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         var isFaceUp = false {
             didSet {
                 if isFaceUp {
+                    print(bonusRemaining)
                     startUsingBonusTime()
                 }
                 else {

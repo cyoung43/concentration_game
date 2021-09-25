@@ -7,6 +7,28 @@
 
 import SwiftUI
 
+enum GameType {
+    case emojiMojo
+    case shapeScape
+    case TempleMatch
+}
+
+struct Theme: Identifiable, Hashable {
+    var id = UUID()
+    var name: String
+    var gameType: GameType
+    var content: [String]
+    var color: Color
+    var numberOfPairsOfCards: Int
+}
+
+let themes = [
+    Theme(name: "Animals", gameType: .emojiMojo, content: ["", ""], color: .blue, numberOfPairsOfCards: 5)
+]
+
+// need for each to iterate over themes in array
+// need theme.swift file
+
 struct EmojiGameView: View {
     @ObservedObject var emojiGame: EmojiConcentrationGame
     
