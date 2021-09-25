@@ -61,6 +61,8 @@ struct EmojiGameView: View {
         }
     }
     
+    // can include private functions here if I want to pass into the aspectVGrid
+    
     private struct Constants {
         static let desiredCardWidth: CGFloat = 110
     }

@@ -2,17 +2,24 @@
 //  AspectVGrid.swift
 //  ConcentrationGame
 //
-//  Created by New User on 9/25/21.
+//  Created by Chris Young on 9/25/21.
 //
 
 import SwiftUI
 
-
 // Need this view to show all cards at the same time on the screen
+// can now pass in functions/logic to this type now
+
 struct AspectVGrid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
     var items: [Item]
     var aspectRatio: CGFloat
     var content: (Item) -> ItemView
+    
+    init(items: [Item], aspectRatio: CGFloat, @ViewBuilder content: @escaping (Item) -> ItemView) {
+        self.items = items
+        self.aspectRatio = aspectRatio
+        self.content = content
+    }
     
     var body: some View {
         GeometryReader { geometry in
