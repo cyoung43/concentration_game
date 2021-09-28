@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct Navigation: View {
+    @State private var name = ""
+    
     var body: some View {
         NavigationView {
-            NavigationLink() {
-                "Game Modes"
+            Form {
+                Section {
+                    TextField("Name", text: $name)
+                }
+                Section(header: Text("Games")) {
+                    NavigationLink("Emoji Mojo", destination: {})
+                    NavigationLink("Shape Scape", destination: {})
+                    NavigationLink("Temple Match", destination: {})
+                }
+                Section(header: Text("Scores")) {
+                    NavigationLink("View High Scores", destination: {})
+                }
+                Section(header: Text("Settings")) {
+                    NavigationLink("Game Settings", destination: {})
+                }
             }
+            
             .navigationTitle("Concentration")
         }
     }
