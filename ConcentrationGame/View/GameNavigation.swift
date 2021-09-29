@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Navigation: View {
+struct GameNavigation: View {
     @State private var name = ""
     
     var body: some View {
@@ -17,6 +17,7 @@ struct Navigation: View {
                     TextField("Name", text: $name)
                 }
                 Section(header: Text("Games")) {
+                    
                     NavigationLink("Emoji Mojo", destination: {})
                     NavigationLink("Shape Scape", destination: {})
                     NavigationLink("Temple Match", destination: {})
@@ -29,13 +30,13 @@ struct Navigation: View {
                 }
             }
             
-            .navigationTitle("Concentration")
+            .navigationTitle("Start")
         }
     }
 }
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        Navigation()
+        GameNavigation()
     }
 }

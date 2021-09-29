@@ -10,7 +10,7 @@ import Foundation
 enum GameType {
     case emojiMojo
     case shapeScape
-    case TempleMatch
+    case templeMatch
 }
 
 struct Theme: Identifiable, Hashable {
@@ -70,6 +70,13 @@ let themes = [
         gameType: .shapeScape,
         content: [],
         color: "yellow",
+        numberOfPairsOfCards: 8 // needs to be random here later
+    ),
+    Theme(
+        name: "Temple Match",
+        gameType: .templeMatch,
+        content: [],
+        color: "gray",
         numberOfPairsOfCards: 8 // needs to be random here later
     )
 ]
