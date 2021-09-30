@@ -70,13 +70,13 @@ let themes = [
         gameType: .shapeScape,
         content: [],
         color: "yellow",
-        numberOfPairsOfCards: 8 // needs to be random here later
+        numberOfPairsOfCards: 8
     ),
     Theme(
         name: "Temple Match",
         gameType: .templeMatch,
         content: [],
         color: "gray",
-        numberOfPairsOfCards: 8 // needs to be random here later
+        numberOfPairsOfCards: 8 
     )
 ]

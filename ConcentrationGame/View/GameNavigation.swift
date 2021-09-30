@@ -18,7 +18,9 @@ struct GameNavigation: View {
                 }
                 Section(header: Text("Games")) {
                     
-                    NavigationLink("Emoji Mojo", destination: {})
+                    NavigationLink("Emoji Mojo", destination: {
+                        EmojiGameView(emojiGame: EmojiConcentrationGame())
+                    })
                     NavigationLink("Shape Scape", destination: {})
                     NavigationLink("Temple Match", destination: {})
                 }

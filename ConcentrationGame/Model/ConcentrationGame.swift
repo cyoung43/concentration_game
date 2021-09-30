@@ -47,7 +47,6 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
             }
             
             else {
-                
                 for index in cards.indices {
                     cards[index].isFaceUp = false
                 }
@@ -82,6 +81,7 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         var content: CardContent
         var id = UUID()
         var viewCount = 0
+        var isDealt = false
         
         // MARK: - Score
         
@@ -136,6 +136,10 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         private mutating func stopUsingBonusTime() {
             pastFaceUpTime = faceUpTime
             lastFaceUpTime = nil
+        }
+        
+        mutating func deal() {
+            isDealt = true
         }
     }
 }
