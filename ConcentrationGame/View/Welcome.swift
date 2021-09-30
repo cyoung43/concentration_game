@@ -10,7 +10,7 @@ import SwiftUI
 struct Welcome: View {
     var body: some View {
         NavigationView {
-            NavigationLink("Start", destination: {
+            NavigationLink("Start New Game", destination: {
                 GameNavigation()
             })
                 .foregroundColor(.green)

@@ -38,6 +38,7 @@ struct EmojiGameView: View {
             ForEach(emojiGame.cards) { card in
                 if isUndealt(card) {
                     CardView(card: card)
+                        .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
                         .transition(AnyTransition.asymmetric(insertion: .opacity, removal: .identity))
                 }

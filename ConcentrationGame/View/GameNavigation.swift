@@ -32,7 +32,7 @@ struct GameNavigation: View {
                 }
             }
             
-            .navigationTitle("Start")
+            .navigationTitle("New Game")
         }
     }
 }
