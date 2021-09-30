@@ -13,7 +13,7 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     private var indexOfTheOneAndOnlyFaceUpCard: Int?
     
     var score: Int {
-        cards.reduce(0) { total, card in
+        cards.reduce(0) { (total, card) -> Int in
             total + card.score
         }
     }
@@ -63,7 +63,6 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         var isFaceUp = false {
             didSet {
                 if isFaceUp {
-                    print(bonusRemaining)
                     startUsingBonusTime()
                 }
                 else {

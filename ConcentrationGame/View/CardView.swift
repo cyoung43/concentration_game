@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
-    @State var locationX: CGFloat = 0
-    @State var locationY: CGFloat = 0
+//    @State var locationX: CGFloat = 0
+//    @State var locationY: CGFloat = 0
     
     @State private var animatedBonusRemaining = 0.0
     
@@ -19,7 +19,7 @@ struct CardView: View {
             if !card.isMatched || card.isFaceUp {
                 ZStack {
                     if card.isConsumingBonusTime {
-                        Pie(startAngle: angle(for: 0), endAngle: angle(for: -card.bonusRemaining))
+                        Pie(startAngle: angle(for: 0), endAngle: angle(for: -animatedBonusRemaining))
                             .padding(geometry.size.width * 0.03)
                             .opacity(0.4)
                             .onAppear {
@@ -42,16 +42,16 @@ struct CardView: View {
                 }
                 .cardify(isFaceUp: card.isFaceUp)
                 .transition(.scale)
-                .offset(x: locationX, y: locationY)
-                .onAppear {
-                    // print(geometry.size.width, geometry.size.height)
-                    if !card.isDealt {
-                        withAnimation(.easeInOut) {
-                            locationX = geometry.size.width * CGFloat.random(in: 2...5)
-                            locationY = geometry.size.height * CGFloat.random(in: 2...5)
-                        }
-                    }
-                }
+//                .offset(x: locationX, y: locationY)
+//                .onAppear {
+//                    // print(geometry.size.width, geometry.size.height)
+//                    if !card.isDealt {
+//                        withAnimation(.easeInOut) {
+//                            locationX = geometry.size.width * CGFloat.random(in: 2...5)
+//                            locationY = geometry.size.height * CGFloat.random(in: 2...5)
+//                        }
+//                    }
+//                }
             }
         }
         .aspectRatio(2/3, contentMode: .fit)
