@@ -53,9 +53,6 @@ struct EmojiGameView: View {
                     deal(card)
                 }
             }
-            withAnimation(.easeInOut) {
-                // deal(Card)
-            }
         }
     }
     
@@ -64,6 +61,7 @@ struct EmojiGameView: View {
             AspectVGrid(items: emojiGame.cards, aspectRatio: CardConstants.aspectRatio) { card in
                 if !isUndealt(card) {
                     CardView(card: card)
+                        .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
                         .transition(AnyTransition.asymmetric(insertion: .identity, removal: .scale))
                         .padding(geometry.size.width * 0.01)
@@ -86,9 +84,7 @@ struct EmojiGameView: View {
     }
     
     private func deal(_ card: ConcentrationGame<String>.Card) {
-        for card in emojiGame.cards {
-            dealtCards.insert(card.id)
-        }
+        dealtCards.insert(card.id)
     }
     
     private func dealAnimation(for card: ConcentrationGame<String>.Card) -> Animation {
@@ -102,7 +98,7 @@ struct EmojiGameView: View {
     }
     
     private func zIndex(for card: ConcentrationGame<String>.Card) -> Double {
-        Double(emojiGame.cards.firstIndex(matching: card) ?? 0)
+        -Double(emojiGame.cards.firstIndex(matching: card) ?? 0)
     }
     
     private struct CardConstants {
