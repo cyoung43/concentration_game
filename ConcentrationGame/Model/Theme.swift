@@ -94,3 +94,9 @@ let themes = [
         numberOfPairsOfCards: 8
     ),
 ]
+
+// TO DO: add in theme colors here?
+// let themeColors = ["temple": Color.blue ...]
+// jk this should be the view model
+
+// for shapes.... write a function for the view. @viewbuilder... here is the shape for that. and here is the shape that we are returning as a some view

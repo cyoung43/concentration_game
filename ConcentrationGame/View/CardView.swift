@@ -49,7 +49,21 @@ struct CardView: View {
     private func cardBody(size: CGSize) -> some View {
         // TO DO: add in theme here
         if theme == "temple" {
+            // TO DO: add in images in the Assets folder
+            // TO DO: load in different image based on the content
+            // TO DO: card.content
             Image("someimagelinkhere")
+        }
+        else if theme == "shape" {
+            // TO DO: distinguish based on card content
+            // TO DO: another function that parses out the shape based on the string??
+            ZStack {
+                Circle()
+                    .opacity(0.4)
+                Circle()
+                    .stroke(lineWidth: 3)
+            }
+            .padding()
         }
         else {
             Text(card.content)
