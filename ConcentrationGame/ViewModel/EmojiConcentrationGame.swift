@@ -6,6 +6,7 @@
 //  View Model
 
 import SwiftUI
+import Foundation
 
 class EmojiConcentrationGame: ObservableObject {
     @Published private var game: ConcentrationGame<String>
@@ -37,7 +38,12 @@ class EmojiConcentrationGame: ObservableObject {
     }
     
     // TO DO: Put in color right here and switch statements to access from the view
-    // TO DO: put in theme right here and return the game.theme
+    var color: Color {
+        let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
+        
+        return convertColor(from: gameTheme[0].color)
+    }
+    
     var theme: [String] {
         game.theme
     }
@@ -50,5 +56,28 @@ class EmojiConcentrationGame: ObservableObject {
     
     func newGame() -> Void {
         game = EmojiConcentrationGame.createGame(theme: game.theme)
+    }
+    
+    private func convertColor(from string: String) -> Color {
+        switch string {
+            case "red":
+                return Color.red
+            case "purple":
+                return Color.purple
+            case "green":
+                return Color.green
+            case "black":
+                return Color.black
+            case "gray":
+                return Color.gray
+            case "yellow":
+                return Color.yellow
+            case "orange":
+                return Color.orange
+            case "pink":
+                return Color.pink
+            default:
+                return Color.blue
+        }
     }
 }
