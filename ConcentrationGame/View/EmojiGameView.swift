@@ -23,12 +23,18 @@ struct EmojiGameView: View {
                 gameBody
             }
             .edgesIgnoringSafeArea(.bottom)
-            .navigationTitle("Concentration")
-            .navigationBarItems(leading: Button("New Game") {
+            .navigationTitle("Score: \(emojiGame.score)")
+            .navigationBarItems(leading: NavigationLink(destination: GameNavigation()
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarHidden(true)) {
+                Image(systemName: "arrow.backward")
+                // TO DO: adjust animation here
+            }.transition(.move(edge: .trailing)),
+                trailing: Button("New Game") {
                 withAnimation(.linear) {
                     emojiGame.newGame()
                 }
-            }, trailing: Text("Score: \(emojiGame.score)"))
+            })
             .navigationBarTitleDisplayMode(.inline)
         }
     }

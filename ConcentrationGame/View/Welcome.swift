@@ -12,6 +12,8 @@ struct Welcome: View {
         NavigationView {
             NavigationLink("Start New Game", destination: {
                 GameNavigation()
+                    .navigationBarBackButtonHidden(true)
+                    .navigationBarHidden(true)
             })
                 .foregroundColor(.green)
                 .font(.title)

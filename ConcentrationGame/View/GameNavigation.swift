@@ -17,10 +17,12 @@ struct GameNavigation: View {
                     TextField("Name", text: $name)
                 }
                 Section(header: Text("Games")) {
-                    
                     NavigationLink("Emoji Mojo", destination: {
                         EmojiGameView(emojiGame: EmojiConcentrationGame())
+                            .navigationBarBackButtonHidden(true)
+                            .navigationBarHidden(true)
                     })
+                        .navigationBarBackButtonHidden(true)
                     NavigationLink("Shape Scape", destination: {})
                     NavigationLink("Temple Match", destination: {})
                 }
