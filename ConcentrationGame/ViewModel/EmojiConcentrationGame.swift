@@ -8,12 +8,20 @@
 import SwiftUI
 
 class EmojiConcentrationGame: ObservableObject {
-    @Published private var game = createGame()
+    @Published private var game: ConcentrationGame<String>
+    
+    // TO DO: Can pass in theme name, enum type, etc
+    init(_ theme: String) {
+        game = EmojiConcentrationGame.createGame(theme: theme)
+    }
     
     private static let emojis = ["🥑", "🥨", "🥭", "🌶", "🥥", "🍕", "🥝"]
     
-    private static func createGame() -> ConcentrationGame<String> {
-        ConcentrationGame<String>(numberOfPairsOfCards: Int.random(in: 2 ... 5)) { index in
+    // TO DO: add in theme to be passed into the model
+    // this is a static function and I can't access the instance vars
+    // the assignment of game needs to go into the initializer
+    private static func createGame(theme: String) -> ConcentrationGame<String> {
+        ConcentrationGame<String>(numberOfPairsOfCards: Int.random(in: 2 ... 5), theme: theme) { index in
             emojis[index]}
     }
     
@@ -34,6 +42,6 @@ class EmojiConcentrationGame: ObservableObject {
     }
     
     func newGame() -> Void {
-        game = EmojiConcentrationGame.createGame()
+        game = EmojiConcentrationGame.createGame(theme: game.theme)
     }
 }

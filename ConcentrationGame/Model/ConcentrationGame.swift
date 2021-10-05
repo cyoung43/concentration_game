@@ -12,14 +12,18 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     
     private var indexOfTheOneAndOnlyFaceUpCard: Int?
     
+    private(set) var theme: String
+    
     var score: Int {
         cards.reduce(0) { (total, card) -> Int in
             total + card.score
         }
     }
     
-    init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
+    // TO DO: add in theme here to be added to the gametype
+    init(numberOfPairsOfCards: Int, theme: String, cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()
+        self.theme = theme
         
         for pairIndex in 0 ..< numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)

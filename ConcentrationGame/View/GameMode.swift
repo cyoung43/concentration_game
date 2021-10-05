@@ -17,7 +17,7 @@ struct GameMode: View {
                 Section(header: Text("Game Modes")) {
                     ForEach (themes) { theme in
                         if theme.gameType == gameType {
-                            NavigationLink(theme.name, destination: { EmojiGameView(emojiGame: EmojiConcentrationGame())
+                            NavigationLink(theme.name, destination: { EmojiGameView(emojiGame: EmojiConcentrationGame("emojiMojo"))
                                     .navigationBarBackButtonHidden(true)
                                     .navigationBarHidden(true)
                                 
