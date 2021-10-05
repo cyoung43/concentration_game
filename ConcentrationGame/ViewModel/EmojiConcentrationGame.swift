@@ -35,6 +35,9 @@ class EmojiConcentrationGame: ObservableObject {
         game.score
     }
     
+    // TO DO: Put in color right here and switch statements to access from the view
+    // TO DO: put in theme right here and return the game.theme
+    
     // MARK: - Intents
     
     func choose(_ card: ConcentrationGame<String>.Card) {

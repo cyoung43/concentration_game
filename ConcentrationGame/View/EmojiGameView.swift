@@ -43,6 +43,7 @@ struct EmojiGameView: View {
         ZStack {
             ForEach(emojiGame.cards) { card in
                 if isUndealt(card) {
+                    // TO DO: add in theme: emojiGame.theme
                     CardView(card: card)
                         .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
@@ -66,6 +67,7 @@ struct EmojiGameView: View {
         GeometryReader { geometry in
             AspectVGrid(items: emojiGame.cards, aspectRatio: CardConstants.aspectRatio) { card in
                 if !isUndealt(card) {
+                    // TO DO: add in theme: emojiGame.theme
                     CardView(card: card)
                         .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
@@ -109,6 +111,7 @@ struct EmojiGameView: View {
     
     private struct CardConstants {
         static let aspectRatio: CGFloat = 2/3
+        // TO DO: get rid of color and instead do emojiGame.color
         static let color = Color.blue
         static let deckWidth: CGFloat = deckHeight * aspectRatio
         static let deckHeight: CGFloat = 150

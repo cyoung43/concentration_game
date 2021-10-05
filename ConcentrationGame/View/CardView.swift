@@ -9,8 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
-//    @State var locationX: CGFloat = 0
-//    @State var locationY: CGFloat = 0
+    // TO DO: add in var theme: String
     
     @State private var animatedBonusRemaining = 0.0
     
@@ -34,27 +33,30 @@ struct CardView: View {
                             .padding(geometry.size.width * 0.03)
                             .opacity(0.4)
                     }
+                    // TO DO: function for the content of the theme
+                    // switch on theme
+                    cardBody(size: geometry.size)
                     
-                    Text(card.content)
-                        .font(systemFont(for: geometry.size))
-                        .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                        .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default)
                 }
                 .cardify(isFaceUp: card.isFaceUp)
                 .transition(.scale)
-//                .offset(x: locationX, y: locationY)
-//                .onAppear {
-//                    // print(geometry.size.width, geometry.size.height)
-//                    if !card.isDealt {
-//                        withAnimation(.easeInOut) {
-//                            locationX = geometry.size.width * CGFloat.random(in: 2...5)
-//                            locationY = geometry.size.height * CGFloat.random(in: 2...5)
-//                        }
-//                    }
-//                }
             }
         }
         .aspectRatio(2/3, contentMode: .fit)
+    }
+    
+    @ViewBuilder
+    private func cardBody(size: CGSize) -> some View {
+        // TO DO: add in theme here
+        if theme == "temple" {
+            Image("someimagelinkhere")
+        }
+        else {
+            Text(card.content)
+                .font(systemFont(for: geometry.size))
+                .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default)
+        }
     }
     
     private func angle(for degrees: Double) -> Angle {
