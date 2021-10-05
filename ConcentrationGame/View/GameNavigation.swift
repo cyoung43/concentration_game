@@ -17,6 +17,14 @@ struct GameNavigation: View {
                     TextField("Name", text: $name)
                 }
                 Section(header: Text("Games")) {
+                    ForEach(themes) { theme in
+                        switch theme.gameType {
+                            case .emojiMojo:
+                                NavigationLink("Emoji Mojo", destination: {})
+                            default:
+                                NavigationLink("Temple Match", destination: {})
+                        }
+                    }
                     NavigationLink("Emoji Mojo", destination: {
                         EmojiGameView(emojiGame: EmojiConcentrationGame())
                             .navigationBarBackButtonHidden(true)

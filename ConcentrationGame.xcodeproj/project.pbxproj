@@ -23,6 +23,7 @@
 		B2C13ED62702DD6B000A14C1 /* GameNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED52702DD6B000A14C1 /* GameNavigation.swift */; };
 		B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED72703781D000A14C1 /* Welcome.swift */; };
 		B2C13EDC2705FEC9000A14C1 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EDB2705FEC9000A14C1 /* ColorHelper.swift */; };
+		B2C13EDE270BDF8F000A14C1 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EDD270BDF8F000A14C1 /* GameMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		B2C13ED52702DD6B000A14C1 /* GameNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameNavigation.swift; sourceTree = "<group>"; };
 		B2C13ED72703781D000A14C1 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		B2C13EDB2705FEC9000A14C1 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		B2C13EDD270BDF8F000A14C1 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				B254A29A26FF95970052641E /* AspectVGrid.swift */,
 				B2C13ED52702DD6B000A14C1 /* GameNavigation.swift */,
 				B2C13ED72703781D000A14C1 /* Welcome.swift */,
+				B2C13EDD270BDF8F000A14C1 /* GameMode.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				B278BEB726E9928A00BA7893 /* ConcentrationGame.swift in Sources */,
 				B24DC8F726FB791A0064FD28 /* Cardify.swift in Sources */,
 				B2C13ED426FFEA2F000A14C1 /* Theme.swift in Sources */,
+				B2C13EDE270BDF8F000A14C1 /* GameMode.swift in Sources */,
 				B2C13EDC2705FEC9000A14C1 /* ColorHelper.swift in Sources */,
 				B24DC8F526FADABB0064FD28 /* ArrayOnly.swift in Sources */,
 				B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */,

@@ -48,7 +48,7 @@ let themes = [
         name: "Foods",
         gameType: .emojiMojo,
         content: ["🍔", "🍩", "🍤", "🍿", "🥞", "🥩", "🍕", "🌯", "🍟", "🍰"],
-        color: "red",
+        color: "yellow",
         numberOfPairsOfCards: 8
     ),
     Theme(
@@ -69,14 +69,28 @@ let themes = [
         name: "Shape Scape",
         gameType: .shapeScape,
         content: [],
-        color: "yellow",
+        color: "purple",
         numberOfPairsOfCards: 8
     ),
     Theme(
-        name: "Temple Match",
+        name: "Pioneer Temples",
         gameType: .templeMatch,
         content: [],
         color: "gray",
         numberOfPairsOfCards: 8 
-    )
+    ),
+    Theme(
+        name: "International",
+        gameType: .templeMatch,
+        content: [],
+        color: "black",
+        numberOfPairsOfCards: 8
+    ),
+    Theme(
+        name: "Utah Temples",
+        gameType: .templeMatch,
+        content: [],
+        color: "orange", // TO DO: Find another color here
+        numberOfPairsOfCards: 8
+    ),
 ]

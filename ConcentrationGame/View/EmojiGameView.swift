@@ -28,7 +28,7 @@ struct EmojiGameView: View {
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)) {
                 Image(systemName: "arrow.backward")
-                // TO DO: adjust animation here
+                // TO DO: adjust transition animation here
             }.transition(.move(edge: .trailing)),
                 trailing: Button("New Game") {
                 withAnimation(.linear) {
