@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-// need for each to iterate over themes in array
-// need theme.swift file
-
 struct EmojiGameView: View {
     @ObservedObject var emojiGame: EmojiConcentrationGame
     
@@ -44,7 +41,7 @@ struct EmojiGameView: View {
             ForEach(emojiGame.cards) { card in
                 if isUndealt(card) {
                     // TO DO: add in theme: emojiGame.theme
-                    CardView(card: card)
+                    CardView(card: card, theme: emojiGame.theme)
                         .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
                         .transition(AnyTransition.asymmetric(insertion: .opacity, removal: .identity))
@@ -68,7 +65,7 @@ struct EmojiGameView: View {
             AspectVGrid(items: emojiGame.cards, aspectRatio: CardConstants.aspectRatio) { card in
                 if !isUndealt(card) {
                     // TO DO: add in theme: emojiGame.theme
-                    CardView(card: card)
+                    CardView(card: card, theme: emojiGame.theme)
                         .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
                         .transition(AnyTransition.asymmetric(insertion: .identity, removal: .scale))
@@ -122,6 +119,6 @@ struct EmojiGameView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        EmojiGameView(emojiGame: EmojiConcentrationGame("emojiMojo"))
+        EmojiGameView(emojiGame: EmojiConcentrationGame([GameType.emojiMojo.rawValue, "People"]))
     }
 }

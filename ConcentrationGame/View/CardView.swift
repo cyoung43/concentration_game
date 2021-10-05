@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
+    var theme: [String]
     // TO DO: add in var theme: String
     
     @State private var animatedBonusRemaining = 0.0
@@ -48,13 +49,13 @@ struct CardView: View {
     @ViewBuilder
     private func cardBody(size: CGSize) -> some View {
         // TO DO: add in theme here
-        if theme == "temple" {
+        if theme[0] == "templeMatch" {
             // TO DO: add in images in the Assets folder
             // TO DO: load in different image based on the content
             // TO DO: card.content
             Image("someimagelinkhere")
         }
-        else if theme == "shape" {
+        else if theme[0] == "shapeScape" {
             // TO DO: distinguish based on card content
             // TO DO: another function that parses out the shape based on the string??
             ZStack {
@@ -67,7 +68,7 @@ struct CardView: View {
         }
         else {
             Text(card.content)
-                .font(systemFont(for: geometry.size))
+                .font(systemFont(for: size))
                 .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
                 .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default)
         }
@@ -90,7 +91,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "🥝"))
+        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "🥝"), theme: [GameType.emojiMojo.rawValue, "People"])
             .foregroundColor(.blue)
             .padding(50)
     }

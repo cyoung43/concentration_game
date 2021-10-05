@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum GameType {
+enum GameType: String {
     case emojiMojo
     case shapeScape
     case templeMatch
@@ -61,14 +61,14 @@ let themes = [
     Theme(
         name: "Random",
         gameType: .emojiMojo,
-        content: [],
+        content: ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"],
         color: "",
         numberOfPairsOfCards: 8 // needs to be random here later
     ),
     Theme(
         name: "Shape Scape",
         gameType: .shapeScape,
-        content: [],
+        content: ["Circle", "Rectangle", "Square", "Capsule", "Shape1", "Shape2", "Shape3", "Shape4"],
         color: "purple",
         numberOfPairsOfCards: 8
     ),
