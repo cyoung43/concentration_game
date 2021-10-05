@@ -68,7 +68,7 @@ let themes = [
     Theme(
         name: "Shape Scape",
         gameType: .shapeScape,
-        content: ["Circle", "Rectangle", "Square", "Capsule", "Shape1", "Shape2", "Shape3", "Shape4"],
+        content: ["circle", "rectangle", "capsule", "triangle", "hexagon", "octagon", "squiggle"],
         color: "purple",
         numberOfPairsOfCards: 8
     ),
@@ -90,7 +90,7 @@ let themes = [
         name: "Utah Temples",
         gameType: .templeMatch,
         content: ["bountiful_temple", "draper_temple", "mount_timpanogos_temple", "taylorsville_temple", "payson_temple", "provo_city_center_temple", "cedar_city_temple", "saratoga_springs_temple"],
-        color: "orange", // TO DO: Find another color here
+        color: "pink", // TO DO: Find another color here
         numberOfPairsOfCards: 8
     ),
 ]

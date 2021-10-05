@@ -65,13 +65,7 @@ struct CardView: View {
         else if theme[0] == "shapeScape" {
             // TO DO: distinguish based on card content
             // TO DO: another function that parses out the shape based on the string??
-            ZStack {
-                Circle()
-                    .opacity(0.4)
-                Circle()
-                    .stroke(lineWidth: 3)
-            }
-            .padding()
+            ShapeReturn(shape: card.content)
         }
         else {
             Text(card.content)
