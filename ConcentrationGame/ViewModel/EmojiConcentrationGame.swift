@@ -22,7 +22,7 @@ class EmojiConcentrationGame: ObservableObject {
     private static func createGame(theme: [String]) -> ConcentrationGame<String> {
         let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
         
-        return ConcentrationGame<String>(numberOfPairsOfCards: Int.random(in: 3 ... gameTheme[0].content.count), theme: theme) { index in
+        return ConcentrationGame<String>(numberOfPairsOfCards: (theme[0] != "templeMatch" ? Int.random(in: 3 ... gameTheme[0].content.count): 4), theme: theme) { index in
             gameTheme[0].content[index]
         }
     }
@@ -51,6 +51,7 @@ class EmojiConcentrationGame: ObservableObject {
     // MARK: - Intents
     
     func choose(_ card: ConcentrationGame<String>.Card) {
+        print(card)
         game.choose(card)
     }
     

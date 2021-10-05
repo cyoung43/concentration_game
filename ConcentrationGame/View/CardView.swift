@@ -53,7 +53,14 @@ struct CardView: View {
             // TO DO: add in images in the Assets folder
             // TO DO: load in different image based on the content
             // TO DO: card.content
-            Image("/temple_pics_concentration/alabang_temple.jpeg")
+            ZStack {
+                Image(card.content)
+                    .resizable()
+                    .scaledToFit()
+            }
+            .padding(size.width * 0.03)
+            .rotation3DEffect(Angle.degrees(card.isMatched ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+            .animation(card.isMatched ? .linear(duration: 2.0).repeatForever(autoreverses: false) : .default)
         }
         else if theme[0] == "shapeScape" {
             // TO DO: distinguish based on card content

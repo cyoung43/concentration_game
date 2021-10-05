@@ -47,7 +47,7 @@
 		B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */ = {isa = PBXFileReference; lastKnownFileType = folder; name = temple_pics_concentration; path = ../../../../../../../Downloads/temple_pics_concentration; sourceTree = "<group>"; };
 		B2C13EE8270CC4F2000A14C1 /* urdaneta_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = urdaneta_temple.jpeg; sourceTree = "<group>"; };
 		B2C13EE9270CC4F2000A14C1 /* bountiful_temple_lds.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bountiful_temple_lds.jpeg; sourceTree = "<group>"; };
-		B2C13EEA270CC4F2000A14C1 /* draper_utah_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draper_utah_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EEA270CC4F2000A14C1 /* draper_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draper_temple.jpeg; sourceTree = "<group>"; };
 		B2C13EEB270CC4F2000A14C1 /* mount_timpanogos_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mount_timpanogos_temple.jpeg; sourceTree = "<group>"; };
 		B2C13EEC270CC4F2000A14C1 /* nauvoo_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nauvoo_temple.jpeg; sourceTree = "<group>"; };
 		B2C13EED270CC4F2000A14C1 /* manti_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manti_temple.jpeg; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			children = (
 				B2C13EE8270CC4F2000A14C1 /* urdaneta_temple.jpeg */,
 				B2C13EE9270CC4F2000A14C1 /* bountiful_temple_lds.jpeg */,
-				B2C13EEA270CC4F2000A14C1 /* draper_utah_temple.jpeg */,
+				B2C13EEA270CC4F2000A14C1 /* draper_temple.jpeg */,
 				B2C13EEB270CC4F2000A14C1 /* mount_timpanogos_temple.jpeg */,
 				B2C13EEC270CC4F2000A14C1 /* nauvoo_temple.jpeg */,
 				B2C13EED270CC4F2000A14C1 /* manti_temple.jpeg */,

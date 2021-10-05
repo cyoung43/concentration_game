@@ -73,23 +73,23 @@ let themes = [
         numberOfPairsOfCards: 8
     ),
     Theme(
-        name: "Pioneer Temples",
+        name: "International",
         gameType: .templeMatch,
-        content: ["temple_pics_concentration/alabang_temple.jpeg"],
+        content: ["alabang_temple", "urdaneta_temple", "manila_temple", "cebu_city_temple", "bangkok_temple", "bengaluru_temple", "antofagasta_temple", "brasilia_temple", "okinawa_temple", "kinshasa_temple"],
         color: "gray",
         numberOfPairsOfCards: 8 
     ),
     Theme(
-        name: "International",
+        name: "Pioneer Temples",
         gameType: .templeMatch,
-        content: [],
+        content: ["salt_lake_temple", "st_george_temple", "nauvoo_temple", "manti_temple", "logan_temple", "mesa_temple", "laie_temple"],
         color: "black",
         numberOfPairsOfCards: 8
     ),
     Theme(
         name: "Utah Temples",
         gameType: .templeMatch,
-        content: [],
+        content: ["bountiful_temple", "draper_temple", "mount_timpanogos_temple", "taylorsville_temple", "payson_temple", "provo_city_center_temple", "cedar_city_temple", "saratoga_springs_temple"],
         color: "orange", // TO DO: Find another color here
         numberOfPairsOfCards: 8
     ),
