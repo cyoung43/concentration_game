@@ -21,7 +21,6 @@
 		B27B41A526EC439500DA34EF /* ArrayIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */; };
 		B2C13ED426FFEA2F000A14C1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED326FFEA2F000A14C1 /* Theme.swift */; };
 		B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED72703781D000A14C1 /* Welcome.swift */; };
-		B2C13EDC2705FEC9000A14C1 /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EDB2705FEC9000A14C1 /* ColorHelper.swift */; };
 		B2C13EE2270BE11F000A14C1 /* GameNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */; };
 		B2C13EE4270BE181000A14C1 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE3270BE181000A14C1 /* GameMode.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,6 @@
 		B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayIdentifiable.swift; sourceTree = "<group>"; };
 		B2C13ED326FFEA2F000A14C1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B2C13ED72703781D000A14C1 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
-		B2C13EDB2705FEC9000A14C1 /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
 		B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameNavigation.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/GameNavigation.swift"; sourceTree = "<group>"; };
 		B2C13EE3270BE181000A14C1 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				B278BEB826E9938D00BA7893 /* EmojiConcentrationGame.swift */,
-				B2C13EDB2705FEC9000A14C1 /* ColorHelper.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -215,7 +212,6 @@
 				B2C13ED426FFEA2F000A14C1 /* Theme.swift in Sources */,
 				B2C13EE4270BE181000A14C1 /* GameMode.swift in Sources */,
 				B2C13EE2270BE11F000A14C1 /* GameNavigation.swift in Sources */,
-				B2C13EDC2705FEC9000A14C1 /* ColorHelper.swift in Sources */,
 				B24DC8F526FADABB0064FD28 /* ArrayOnly.swift in Sources */,
 				B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */,
 				B278BEAB26E98ACD00BA7893 /* EmojiGameView.swift in Sources */,
