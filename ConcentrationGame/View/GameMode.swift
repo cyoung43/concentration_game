@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameMode: View {
     var gameType: GameType
+    // @State var navTitle: String = getPageTitle(gameType: gameType)
     
     var body: some View {
         NavigationView {
@@ -26,8 +27,23 @@ struct GameMode: View {
                     }
                 }
             }
-                .navigationTitle("Emoji Mojo")
+                .navigationTitle(getPageTitle(gameType: gameType))
         }
+    }
+    
+    private func getPageTitle(gameType: GameType) -> String {
+        var navTitle: String
+        
+        switch gameType {
+            case .emojiMojo:
+                navTitle = "Emoji Mojo"
+            case .shapeScape:
+                navTitle = "Shape Scape"
+            default:
+                navTitle = "Temple Match"
+        }
+        
+        return navTitle
     }
 }
 
