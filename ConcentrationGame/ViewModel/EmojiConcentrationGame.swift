@@ -16,11 +16,13 @@ class EmojiConcentrationGame: ObservableObject {
         game = EmojiConcentrationGame.createGame(theme: theme)
     }
     
-    private static let emojis = ["🥑", "🥨", "🥭", "🌶", "🥥", "🍕", "🥝"]
-    
     // TO DO: It seems like 6 different games are starting before it should be. Like in random, if I don't already have items in the content or a number of cards, then it's not working.... Get an index out of range error.
     private static func createGame(theme: [String]) -> ConcentrationGame<String> {
-        let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
+        var gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
+        
+        if gameTheme[0].name == "Random" {
+            gameTheme.insert(buildRandom(), at: 0)
+        }
         
         return ConcentrationGame<String>(numberOfPairsOfCards: (theme[0] != "templeMatch" ? Int.random(in: 3 ... gameTheme[0].content.count): 4), theme: theme) { index in
             gameTheme[0].content[index]

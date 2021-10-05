@@ -59,10 +59,11 @@ let themes = [
         numberOfPairsOfCards: 8
     ),
     Theme(
+        // see functions below to actually build this theme
         name: "Random",
         gameType: .emojiMojo,
         content: ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"],
-        color: "",
+        color: "indigo",
         numberOfPairsOfCards: 8 // needs to be random here later
     ),
     Theme(
@@ -100,3 +101,33 @@ let themes = [
 // jk this should be the view model
 
 // for shapes.... write a function for the view. @viewbuilder... here is the shape for that. and here is the shape that we are returning as a some view
+
+
+// TO DO: random color not working.... it's showing blue as a default
+private func createRandomContent() -> [String] {
+    var content: [String] = []
+    var i = 0
+    
+    while i < 10 {
+        let item = themes[Int.random(in: 0...4)].content[Int.random(in: 0...9)]
+        
+        if !content.contains(item) {
+            content.append(item)
+            i += 1
+        }
+    }
+    
+    return content
+}
+
+func buildRandom() -> Theme {
+    let random = Theme(
+        name: "Random",
+        gameType: .emojiMojo,
+        content: createRandomContent(),
+        color: themes[Int.random(in: 0 ... themes.count)].color,
+        numberOfPairsOfCards: Int.random(in: 3...10)
+    )
+    print(random)
+    return random
+}
