@@ -25,6 +25,8 @@
 		B2C13EE4270BE181000A14C1 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE3270BE181000A14C1 /* GameMode.swift */; };
 		B2C13EE6270CC4CB000A14C1 /* temple_pics_concentration in Resources */ = {isa = PBXBuildFile; fileRef = B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */; };
 		B2C13F02270CE008000A14C1 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F01270CE008000A14C1 /* GameSettings.swift */; };
+		B2C13F04270CFB08000A14C1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F03270CFB08000A14C1 /* Triangle.swift */; };
+		B2C13F06270D01D6000A14C1 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F05270D01D6000A14C1 /* Polygon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		B2C13EFF270CC4F2000A14C1 /* okinawa_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = okinawa_temple.jpeg; sourceTree = "<group>"; };
 		B2C13F00270CC4F2000A14C1 /* kinshasa_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kinshasa_temple.jpeg; sourceTree = "<group>"; };
 		B2C13F01270CE008000A14C1 /* GameSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		B2C13F03270CFB08000A14C1 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+		B2C13F05270D01D6000A14C1 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,13 +134,15 @@
 				B278BEA826E98ACD00BA7893 /* ConcentrationGameApp.swift */,
 				B278BEAA26E98ACD00BA7893 /* EmojiGameView.swift */,
 				B27B41A226EC3DD900DA34EF /* CardView.swift */,
-				B255342A26FA962E00B8FE04 /* Pie.swift */,
 				B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */,
 				B24DC8F626FB791A0064FD28 /* Cardify.swift */,
 				B254A29A26FF95970052641E /* AspectVGrid.swift */,
 				B2C13ED72703781D000A14C1 /* Welcome.swift */,
 				B2C13EE3270BE181000A14C1 /* GameMode.swift */,
 				B2C13F01270CE008000A14C1 /* GameSettings.swift */,
+				B2C13F03270CFB08000A14C1 /* Triangle.swift */,
+				B255342A26FA962E00B8FE04 /* Pie.swift */,
+				B2C13F05270D01D6000A14C1 /* Polygon.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -283,8 +289,10 @@
 				B278BEAB26E98ACD00BA7893 /* EmojiGameView.swift in Sources */,
 				B255342B26FA962F00B8FE04 /* Pie.swift in Sources */,
 				B278BEA926E98ACD00BA7893 /* ConcentrationGameApp.swift in Sources */,
+				B2C13F06270D01D6000A14C1 /* Polygon.swift in Sources */,
 				B254A29B26FF95970052641E /* AspectVGrid.swift in Sources */,
 				B27B41A326EC3DD900DA34EF /* CardView.swift in Sources */,
+				B2C13F04270CFB08000A14C1 /* Triangle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

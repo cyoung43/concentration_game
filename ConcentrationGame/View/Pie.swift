@@ -39,7 +39,6 @@ struct Pie: Shape {
         
         return p
     }
-    
 }
 
 struct Pie_Previews: PreviewProvider {
