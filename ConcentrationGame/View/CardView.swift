@@ -53,7 +53,7 @@ struct CardView: View {
             // TO DO: add in images in the Assets folder
             // TO DO: load in different image based on the content
             // TO DO: card.content
-            Image("someimagelinkhere")
+            Image("/temple_pics_concentration/alabang_temple.jpeg")
         }
         else if theme[0] == "shapeScape" {
             // TO DO: distinguish based on card content

@@ -75,7 +75,7 @@ let themes = [
     Theme(
         name: "Pioneer Temples",
         gameType: .templeMatch,
-        content: [],
+        content: ["temple_pics_concentration/alabang_temple.jpeg"],
         color: "gray",
         numberOfPairsOfCards: 8 
     ),

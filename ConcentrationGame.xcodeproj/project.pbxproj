@@ -23,6 +23,7 @@
 		B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED72703781D000A14C1 /* Welcome.swift */; };
 		B2C13EE2270BE11F000A14C1 /* GameNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */; };
 		B2C13EE4270BE181000A14C1 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE3270BE181000A14C1 /* GameMode.swift */; };
+		B2C13EE6270CC4CB000A14C1 /* temple_pics_concentration in Resources */ = {isa = PBXBuildFile; fileRef = B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,32 @@
 		B2C13ED72703781D000A14C1 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameNavigation.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/GameNavigation.swift"; sourceTree = "<group>"; };
 		B2C13EE3270BE181000A14C1 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */ = {isa = PBXFileReference; lastKnownFileType = folder; name = temple_pics_concentration; path = ../../../../../../../Downloads/temple_pics_concentration; sourceTree = "<group>"; };
+		B2C13EE8270CC4F2000A14C1 /* urdaneta_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = urdaneta_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EE9270CC4F2000A14C1 /* bountiful_temple_lds.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bountiful_temple_lds.jpeg; sourceTree = "<group>"; };
+		B2C13EEA270CC4F2000A14C1 /* draper_utah_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = draper_utah_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EEB270CC4F2000A14C1 /* mount_timpanogos_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mount_timpanogos_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EEC270CC4F2000A14C1 /* nauvoo_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nauvoo_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EED270CC4F2000A14C1 /* manti_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manti_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EEE270CC4F2000A14C1 /* taylorsville_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = taylorsville_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EEF270CC4F2000A14C1 /* manila_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manila_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EF0270CC4F2000A14C1 /* salt_lake_templejpeg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = salt_lake_templejpeg.jpeg; sourceTree = "<group>"; };
+		B2C13EF1270CC4F2000A14C1 /* cebu_city_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cebu_city_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EF2270CC4F2000A14C1 /* st_george_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = st_george_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EF3270CC4F2000A14C1 /* payson_utah.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = payson_utah.jpeg; sourceTree = "<group>"; };
+		B2C13EF4270CC4F2000A14C1 /* provo_city_center_templejpeg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = provo_city_center_templejpeg.jpeg; sourceTree = "<group>"; };
+		B2C13EF5270CC4F2000A14C1 /* bangkok_temple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bangkok_temple.png; sourceTree = "<group>"; };
+		B2C13EF6270CC4F2000A14C1 /* cedar_city_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cedar_city_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EF7270CC4F2000A14C1 /* bengaluru_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bengaluru_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EF8270CC4F2000A14C1 /* saratoga_springs_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = saratoga_springs_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EF9270CC4F2000A14C1 /* laie_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = laie_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EFA270CC4F2000A14C1 /* logan_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logan_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EFB270CC4F2000A14C1 /* alabang_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alabang_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EFC270CC4F2000A14C1 /* antofagasta_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = antofagasta_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EFD270CC4F2000A14C1 /* brasilia_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brasilia_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EFE270CC4F2000A14C1 /* mesa_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mesa_temple.jpeg; sourceTree = "<group>"; };
+		B2C13EFF270CC4F2000A14C1 /* okinawa_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = okinawa_temple.jpeg; sourceTree = "<group>"; };
+		B2C13F00270CC4F2000A14C1 /* kinshasa_temple.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kinshasa_temple.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +108,7 @@
 				B27B41A126EC3D0400DA34EF /* Utility */,
 				B278BEAE26E98ACE00BA7893 /* Preview Content */,
 				B278BEAC26E98ACE00BA7893 /* Assets.xcassets */,
+				B2C13EE7270CC4F2000A14C1 /* temple_pics_concentration */,
 			);
 			path = ConcentrationGame;
 			sourceTree = "<group>";
@@ -88,6 +116,7 @@
 		B278BEAE26E98ACE00BA7893 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */,
 				B278BEAF26E98ACE00BA7893 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -133,6 +162,38 @@
 				B24DC8F426FADABB0064FD28 /* ArrayOnly.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		B2C13EE7270CC4F2000A14C1 /* temple_pics_concentration */ = {
+			isa = PBXGroup;
+			children = (
+				B2C13EE8270CC4F2000A14C1 /* urdaneta_temple.jpeg */,
+				B2C13EE9270CC4F2000A14C1 /* bountiful_temple_lds.jpeg */,
+				B2C13EEA270CC4F2000A14C1 /* draper_utah_temple.jpeg */,
+				B2C13EEB270CC4F2000A14C1 /* mount_timpanogos_temple.jpeg */,
+				B2C13EEC270CC4F2000A14C1 /* nauvoo_temple.jpeg */,
+				B2C13EED270CC4F2000A14C1 /* manti_temple.jpeg */,
+				B2C13EEE270CC4F2000A14C1 /* taylorsville_temple.jpeg */,
+				B2C13EEF270CC4F2000A14C1 /* manila_temple.jpeg */,
+				B2C13EF0270CC4F2000A14C1 /* salt_lake_templejpeg.jpeg */,
+				B2C13EF1270CC4F2000A14C1 /* cebu_city_temple.jpeg */,
+				B2C13EF2270CC4F2000A14C1 /* st_george_temple.jpeg */,
+				B2C13EF3270CC4F2000A14C1 /* payson_utah.jpeg */,
+				B2C13EF4270CC4F2000A14C1 /* provo_city_center_templejpeg.jpeg */,
+				B2C13EF5270CC4F2000A14C1 /* bangkok_temple.png */,
+				B2C13EF6270CC4F2000A14C1 /* cedar_city_temple.jpeg */,
+				B2C13EF7270CC4F2000A14C1 /* bengaluru_temple.jpeg */,
+				B2C13EF8270CC4F2000A14C1 /* saratoga_springs_temple.jpeg */,
+				B2C13EF9270CC4F2000A14C1 /* laie_temple.jpeg */,
+				B2C13EFA270CC4F2000A14C1 /* logan_temple.jpeg */,
+				B2C13EFB270CC4F2000A14C1 /* alabang_temple.jpeg */,
+				B2C13EFC270CC4F2000A14C1 /* antofagasta_temple.jpeg */,
+				B2C13EFD270CC4F2000A14C1 /* brasilia_temple.jpeg */,
+				B2C13EFE270CC4F2000A14C1 /* mesa_temple.jpeg */,
+				B2C13EFF270CC4F2000A14C1 /* okinawa_temple.jpeg */,
+				B2C13F00270CC4F2000A14C1 /* kinshasa_temple.jpeg */,
+			);
+			path = temple_pics_concentration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +256,7 @@
 			files = (
 				B278BEB026E98ACE00BA7893 /* Preview Assets.xcassets in Resources */,
 				B278BEAD26E98ACE00BA7893 /* Assets.xcassets in Resources */,
+				B2C13EE6270CC4CB000A14C1 /* temple_pics_concentration in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +419,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,7 +449,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
