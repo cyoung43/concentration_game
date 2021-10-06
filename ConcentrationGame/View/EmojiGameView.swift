@@ -13,8 +13,6 @@ struct EmojiGameView: View {
     @State private var dealtCards = Set<UUID>()
     @Namespace private var dealingCards
     
-    var sounds = SoundPlayer()
-    
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -54,7 +52,7 @@ struct EmojiGameView: View {
         .frame(width: CardConstants.deckWidth, height: CardConstants.deckHeight)
         .padding(.bottom)
         .onTapGesture {
-            sounds.playSound(named: "shuffle_deck.mp3")
+            emojiGame.soundPlayer.playSound(named: "shuffle_deck")
             
             for card in emojiGame.cards {
                 withAnimation(dealAnimation(for: card)) {

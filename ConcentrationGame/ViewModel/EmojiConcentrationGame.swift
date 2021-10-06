@@ -43,6 +43,8 @@ class EmojiConcentrationGame: ObservableObject {
         game.gameOver
     }
     
+    @State var soundPlayer = SoundPlayer()
+    
     // TO DO: Put in color right here and switch statements to access from the view
     var color: Color {
         let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
