@@ -20,6 +20,8 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         }
     }
     
+    var gameOver: Bool = false
+    
     // TO DO: add in theme here to be added to the gametype
     init(numberOfPairsOfCards: Int, theme: [String], cardContentFactory: (Int) -> CardContent) {
         cards = Array<Card>()

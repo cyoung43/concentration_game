@@ -7,11 +7,11 @@
 
 import SwiftUI
 import Foundation
+import AVFoundation
 
 class EmojiConcentrationGame: ObservableObject {
     @Published private var game: ConcentrationGame<String>
     
-    // TO DO: Can pass in theme name, enum type, etc
     init(_ theme: [String]) {
         game = EmojiConcentrationGame.createGame(theme: theme)
     }
@@ -39,6 +39,10 @@ class EmojiConcentrationGame: ObservableObject {
         game.score
     }
     
+    var gameIsOver: Bool {
+        game.gameOver
+    }
+    
     // TO DO: Put in color right here and switch statements to access from the view
     var color: Color {
         let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
@@ -53,12 +57,15 @@ class EmojiConcentrationGame: ObservableObject {
     // MARK: - Intents
     
     func choose(_ card: ConcentrationGame<String>.Card) {
-        print(card)
         game.choose(card)
     }
     
     func newGame() -> Void {
         game = EmojiConcentrationGame.createGame(theme: game.theme)
+    }
+    
+    func gameOver() {
+        game.gameOver = true
     }
     
     private func convertColor(from string: String) -> Color {
@@ -81,6 +88,26 @@ class EmojiConcentrationGame: ObservableObject {
                 return Color.pink
             default:
                 return Color.blue
+        }
+    }
+}
+
+// Sounds coming from ZapSplat.com
+struct SoundPlayer {
+    var player: AVAudioPlayer?
+    
+    mutating func playSound(named soundName: String) {
+        guard let path = Bundle.main.path(forResource: soundName, ofType: nil)
+        else {
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+            player?.play()
+        }
+        catch {
+            
         }
     }
 }

@@ -28,6 +28,11 @@
 		B2C13F04270CFB08000A14C1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F03270CFB08000A14C1 /* Triangle.swift */; };
 		B2C13F06270D01D6000A14C1 /* Polygon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F05270D01D6000A14C1 /* Polygon.swift */; };
 		B2C13F08270D0652000A14C1 /* ShapeReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F07270D0652000A14C1 /* ShapeReturn.swift */; };
+		B2C13F0A270E5510000A14C1 /* distant_fireworks.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F09270E550F000A14C1 /* distant_fireworks.mp3 */; };
+		B2C13F0C270E5524000A14C1 /* whoosh_boom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F0B270E5524000A14C1 /* whoosh_boom.mp3 */; };
+		B2C13F0E270E552B000A14C1 /* basketball_rim_clank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F0D270E552B000A14C1 /* basketball_rim_clank.mp3 */; };
+		B2C13F10270E5532000A14C1 /* firework_rocket_launch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F0F270E5532000A14C1 /* firework_rocket_launch.mp3 */; };
+		B2C13F12270E57EA000A14C1 /* shuffle_deck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F11270E57EA000A14C1 /* shuffle_deck.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +83,11 @@
 		B2C13F03270CFB08000A14C1 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
 		B2C13F05270D01D6000A14C1 /* Polygon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polygon.swift; sourceTree = "<group>"; };
 		B2C13F07270D0652000A14C1 /* ShapeReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeReturn.swift; sourceTree = "<group>"; };
+		B2C13F09270E550F000A14C1 /* distant_fireworks.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = distant_fireworks.mp3; path = ../../../../../../../Downloads/distant_fireworks.mp3; sourceTree = "<group>"; };
+		B2C13F0B270E5524000A14C1 /* whoosh_boom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = whoosh_boom.mp3; path = ../../../../../../../Downloads/whoosh_boom.mp3; sourceTree = "<group>"; };
+		B2C13F0D270E552B000A14C1 /* basketball_rim_clank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = basketball_rim_clank.mp3; path = ../../../../../../../Downloads/basketball_rim_clank.mp3; sourceTree = "<group>"; };
+		B2C13F0F270E5532000A14C1 /* firework_rocket_launch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = firework_rocket_launch.mp3; path = ../../../../../../../Downloads/firework_rocket_launch.mp3; sourceTree = "<group>"; };
+		B2C13F11270E57EA000A14C1 /* shuffle_deck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = shuffle_deck.mp3; path = ../../../../../../../Downloads/shuffle_deck.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +189,11 @@
 		B2C13EE7270CC4F2000A14C1 /* temple_pics_concentration */ = {
 			isa = PBXGroup;
 			children = (
+				B2C13F11270E57EA000A14C1 /* shuffle_deck.mp3 */,
+				B2C13F0F270E5532000A14C1 /* firework_rocket_launch.mp3 */,
+				B2C13F0D270E552B000A14C1 /* basketball_rim_clank.mp3 */,
+				B2C13F0B270E5524000A14C1 /* whoosh_boom.mp3 */,
+				B2C13F09270E550F000A14C1 /* distant_fireworks.mp3 */,
 				B2C13EE8270CC4F2000A14C1 /* urdaneta_temple.jpeg */,
 				B2C13EE9270CC4F2000A14C1 /* bountiful_temple_lds.jpeg */,
 				B2C13EEA270CC4F2000A14C1 /* draper_temple.jpeg */,
@@ -267,8 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B278BEB026E98ACE00BA7893 /* Preview Assets.xcassets in Resources */,
+				B2C13F12270E57EA000A14C1 /* shuffle_deck.mp3 in Resources */,
+				B2C13F0A270E5510000A14C1 /* distant_fireworks.mp3 in Resources */,
 				B278BEAD26E98ACE00BA7893 /* Assets.xcassets in Resources */,
+				B2C13F10270E5532000A14C1 /* firework_rocket_launch.mp3 in Resources */,
 				B2C13EE6270CC4CB000A14C1 /* temple_pics_concentration in Resources */,
+				B2C13F0E270E552B000A14C1 /* basketball_rim_clank.mp3 in Resources */,
+				B2C13F0C270E5524000A14C1 /* whoosh_boom.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
