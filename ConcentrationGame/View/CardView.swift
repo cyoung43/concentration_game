@@ -18,21 +18,26 @@ struct CardView: View {
         GeometryReader { geometry in
             if !card.isMatched || card.isFaceUp {
                 ZStack {
-                    if card.isConsumingBonusTime {
-                        Pie(startAngle: angle(for: 0), endAngle: angle(for: -animatedBonusRemaining))
-                            .padding(geometry.size.width * 0.03)
-                            .opacity(0.4)
-                            .onAppear {
-                                animatedBonusRemaining = card.bonusRemaining
-                                withAnimation(.linear(duration: card.bonusTimeRemaining)) {
-                                    animatedBonusRemaining = 0
+                    if theme[0] != "random" {
+                        if card.isConsumingBonusTime {
+                            Pie(startAngle: angle(for: 0), endAngle: angle(for: -animatedBonusRemaining))
+                                .padding(geometry.size.width * 0.03)
+                                .opacity(0.4)
+                                .onAppear {
+                                    animatedBonusRemaining = card.bonusRemaining
+                                    withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+                                        animatedBonusRemaining = 0
+                                    }
                                 }
-                            }
+                        }
+                        else {
+                            Pie(startAngle: angle(for: 0), endAngle: angle(for: -card.bonusRemaining))
+                                .padding(geometry.size.width * 0.03)
+                                .opacity(0.4)
+                        }
                     }
                     else {
-                        Pie(startAngle: angle(for: 0), endAngle: angle(for: -card.bonusRemaining))
-                            .padding(geometry.size.width * 0.03)
-                            .opacity(0.4)
+                        SquareAnimation(height: geometry.size.height * 2, width: geometry.size.width * 2)
                     }
                     // TO DO: function for the content of the theme
                     // switch on theme
@@ -64,6 +69,9 @@ struct CardView: View {
             // TO DO: figure out why circle is purple and stroke is red
             ShapeReturn(shape: card.content)
         }
+        else if theme[0] == "random" {
+            Text("r1")
+        }
         else {
             Text(card.content)
                 .font(systemFont(for: size))
@@ -89,8 +97,12 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "🥝"), theme: [GameType.emojiMojo.rawValue, "People"])
+        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "r1"), theme: ["random", "Random"])
             .foregroundColor(.blue)
             .padding(50)
     }
 }
+
+
+// content: "🥝"
+// theme: [GameType.emojiMojo.rawValue, "People"]

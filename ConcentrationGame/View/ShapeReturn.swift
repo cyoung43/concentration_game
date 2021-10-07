@@ -25,7 +25,6 @@ struct ShapeReturn: View {
                     Circle()
                         .stroke(.red, lineWidth: 3)
                 }
-                Circle()
             case "capsule":
                 ZStack {
                     Capsule()
@@ -34,6 +33,7 @@ struct ShapeReturn: View {
                         .stroke(.blue, lineWidth: 3)
                 }
                 .aspectRatio(1/2, contentMode: .fit)
+                .padding(15)
             case "rectangle":
                 ZStack {
                     Rectangle()
@@ -42,6 +42,7 @@ struct ShapeReturn: View {
                         .stroke(.gray, lineWidth: 3)
                 }
                 .aspectRatio(1/2, contentMode: .fit)
+                .padding(15)
             case "triangle":
                 ZStack {
                     Triangle()
@@ -49,6 +50,7 @@ struct ShapeReturn: View {
                     Triangle()
                         .stroke(.green, lineWidth: 3)
                 }
+                .padding(15)
                 .aspectRatio(1/2, contentMode: .fit)
             case "hexagon":
                 ZStack {

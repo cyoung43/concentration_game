@@ -24,13 +24,14 @@ struct EmojiGameView: View {
             .navigationBarItems(leading: NavigationLink(destination: GameNavigation()
                     .navigationBarBackButtonHidden(true)
                     .navigationBarHidden(true)) {
-                Image(systemName: "arrow.backward")
+                    Image(systemName: "arrow.backward")
                 // TO DO: adjust transition animation here
-            }.transition(.move(edge: .trailing)),
-                trailing: Button("New Game") {
-                withAnimation(.linear) {
-                    emojiGame.newGame()
                 }
+                    .transition(.move(edge: .trailing)),
+                trailing: Button("New Game") {
+                    withAnimation(.linear) {
+                        emojiGame.newGame()
+                    }
             })
             .navigationBarTitleDisplayMode(.inline)
         }
@@ -40,7 +41,6 @@ struct EmojiGameView: View {
         ZStack {
             ForEach(emojiGame.cards) { card in
                 if isUndealt(card) {
-                    // TO DO: add in theme: emojiGame.theme
                     CardView(card: card, theme: emojiGame.theme)
                         .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
