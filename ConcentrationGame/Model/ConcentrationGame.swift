@@ -65,9 +65,10 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    func isGameStillGoing(cards: [Card]) {
+    func isGameStillGoing() {
         let check = cards.allSatisfy { $0.isMatched }
         
+        // TO DO: mark gameOver as true
         if check {
             
         }

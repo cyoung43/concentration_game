@@ -60,7 +60,6 @@ class EmojiConcentrationGame: ObservableObject {
     func choose(_ card: ConcentrationGame<String>.Card) {
         game.choose(card)
         
-        
         player.playSound(named: "firework_rocket_launch.mp3")
     }
     

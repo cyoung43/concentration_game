@@ -21,7 +21,6 @@ struct ShapeReturn: View {
         case "circle":
             ZStack {
                 Circle()
-                    .opacity(0.4)
                     .foregroundColor(.red)
                 Circle()
                     .stroke(.red, lineWidth: 3)
@@ -30,7 +29,6 @@ struct ShapeReturn: View {
         case "capsule":
             ZStack {
                 Capsule()
-                    .opacity(0.4)
                     .foregroundColor(.blue)
                 Capsule()
                     .stroke(.blue, lineWidth: 3)
@@ -38,7 +36,6 @@ struct ShapeReturn: View {
         case "rectangle":
             ZStack {
                 Rectangle()
-                    .opacity(0.4)
                     .foregroundColor(.gray)
                 Rectangle()
                     .stroke(.gray, lineWidth: 3)
@@ -46,7 +43,6 @@ struct ShapeReturn: View {
         case "triangle":
             ZStack {
                 Triangle()
-                    .opacity(0.4)
                     .foregroundColor(.green)
                 Triangle()
                     .stroke(.green, lineWidth: 3)
@@ -54,7 +50,6 @@ struct ShapeReturn: View {
         case "hexagon":
             ZStack {
                 Polygon(sides: 6, angle: 90)
-                    .opacity(0.4)
                     .foregroundColor(.orange)
                 Polygon(sides: 6, angle: 90)
                     .stroke(.orange, lineWidth: 3)
@@ -62,7 +57,6 @@ struct ShapeReturn: View {
         case "octagon":
             ZStack {
                 Polygon(sides: 8, angle: 90)
-                    .opacity(0.4)
                     .foregroundColor(.yellow)
                 Polygon(sides: 8, angle: 90)
                     .stroke(.yellow, lineWidth: 3)
@@ -70,7 +64,6 @@ struct ShapeReturn: View {
         default:
             ZStack {
                 Circle()
-                    .opacity(0.4)
                     .foregroundColor(.brown)
                 Circle()
                     .stroke(.brown, lineWidth: 3)
