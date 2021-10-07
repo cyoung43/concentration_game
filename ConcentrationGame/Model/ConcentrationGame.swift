@@ -65,17 +65,31 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         }
     }
     
-    func isGameStillGoing() {
+    mutating func isGameStillGoing(gameType theme: String) {
         let check = cards.allSatisfy { $0.isMatched }
         
         // TO DO: mark gameOver as true
         if check {
-            
+            gameOver = true
+            gameIsFinished(theme: theme)
         }
     }
     
-    func gameIsFinished(name: String) {
+    func gameIsFinished(theme: String) {
+        let userDefaults = UserDefaults.standard
         // TO DO: check if there is a new high score based on the name, theme, and overall high score
+        if let highScore = userDefaults.string(forKey: "highScore") {
+            if score > Int(highScore) ?? 0 {
+                userDefaults.set(score, forKey: "highScore")
+            }
+        }
+        else {
+            userDefaults.set(score, forKey: "highScore")
+        }
+        
+        
+        
+        print(userDefaults.integer(forKey: "highScore"))
     }
     
     struct Card: Identifiable {

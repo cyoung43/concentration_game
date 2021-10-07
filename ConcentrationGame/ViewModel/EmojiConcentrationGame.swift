@@ -44,7 +44,6 @@ class EmojiConcentrationGame: ObservableObject {
         game.gameOver
     }
     
-    // TO DO: Put in color right here and switch statements to access from the view
     var color: Color {
         let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
         
@@ -59,8 +58,15 @@ class EmojiConcentrationGame: ObservableObject {
     
     func choose(_ card: ConcentrationGame<String>.Card) {
         game.choose(card)
+        print(card)
+        if card.isMatched {
+            player.playSound(named: "whoosh_boom")
+        }
+        else {
+            player.playSound(named: "firework_rocket_launch.mp3")
+        }
         
-        player.playSound(named: "firework_rocket_launch.mp3")
+        game.isGameStillGoing(gameType: theme[0])
     }
     
     func newGame() -> Void {

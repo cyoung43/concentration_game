@@ -20,6 +20,7 @@ struct Theme: Identifiable, Hashable {
     var content: [String]
     var color: String
     var numberOfPairsOfCards: Int
+    var highScore: Int
 }
 
 let themes = [
@@ -28,35 +29,40 @@ let themes = [
         gameType: .emojiMojo,
         content: ["👮🏻‍♀️", "🕵🏻‍♂️", "👩🏻‍🚀", "👨🏻‍⚖️", "🧞‍♂️", "🧙🏻‍♂️", "🎅🏼", "👩🏻‍🎨", "👩🏻‍💼", "🥷🏼"],
         color: "blue",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Halloween",
         gameType: .emojiMojo,
         content: ["🕸", "🎃", "🦇", "🍭", "🧙🏼‍♀️", "👻", "😱", "🧪", "🔮", "🕷"],
         color: "orange",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Fruits",
         gameType: .emojiMojo,
         content: ["🥑", "🍓", "🥭", "🍌", "🥥", "🍍", "🥝", "🍇", "🫐", "🍉"],
         color: "red",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Foods",
         gameType: .emojiMojo,
         content: ["🍔", "🍩", "🍤", "🍿", "🥞", "🥩", "🍕", "🌯", "🍟", "🍰"],
         color: "yellow",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Symbols",
         gameType: .emojiMojo,
         content: ["🚮", "🔀", "⤵️", "🔂", "3️⃣", "🔝", "🔜", "⚖️", "⚠️", "❔"],
         color: "green",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         // see functions below to actually build this theme
@@ -64,35 +70,40 @@ let themes = [
         gameType: .emojiMojo,
         content: ["r1", "r2", "r3", "r4", "r5", "r6", "r7", "r8"],
         color: "indigo",
-        numberOfPairsOfCards: 8 // needs to be random here later
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Shape Scape",
         gameType: .shapeScape,
         content: ["circle", "rectangle", "capsule", "triangle", "hexagon", "octagon", "squiggle"],
         color: "purple",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "International",
         gameType: .templeMatch,
         content: ["alabang_temple", "urdaneta_temple", "manila_temple", "cebu_city_temple", "bangkok_temple", "bengaluru_temple", "antofagasta_temple", "brasilia_temple", "okinawa_temple", "kinshasa_temple"],
         color: "gray",
-        numberOfPairsOfCards: 8 
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Pioneer Temples",
         gameType: .templeMatch,
         content: ["salt_lake_temple", "st_george_temple", "nauvoo_temple", "manti_temple", "logan_temple", "mesa_temple", "laie_temple"],
         color: "black",
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
     Theme(
         name: "Utah Temples",
         gameType: .templeMatch,
         content: ["bountiful_temple", "draper_temple", "mount_timpanogos_temple", "taylorsville_temple", "payson_temple", "provo_city_center_temple", "cedar_city_temple", "saratoga_springs_temple"],
         color: "pink", // TO DO: Find another color here
-        numberOfPairsOfCards: 8
+        numberOfPairsOfCards: 8,
+        highScore: 0
     ),
 ]
 
@@ -125,8 +136,9 @@ func buildRandom() -> Theme {
         name: "Random",
         gameType: .emojiMojo,
         content: createRandomContent(),
-        color: themes[Int.random(in: 0 ... themes.count)].color,
-        numberOfPairsOfCards: Int.random(in: 3...10)
+        color: themes[Int.random(in: 0 ..< 10)].color,
+        numberOfPairsOfCards: Int.random(in: 3...10),
+        highScore: 0
     )
     
     return random
