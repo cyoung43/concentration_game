@@ -48,11 +48,7 @@ struct CardView: View {
     
     @ViewBuilder
     private func cardBody(size: CGSize) -> some View {
-        // TO DO: add in theme here
         if theme[0] == "templeMatch" {
-            // TO DO: add in images in the Assets folder
-            // TO DO: load in different image based on the content
-            // TO DO: card.content
             ZStack {
                 Image(card.content)
                     .resizable()
@@ -63,8 +59,9 @@ struct CardView: View {
             .animation(card.isMatched ? .linear(duration: 2.0).repeatForever(autoreverses: false) : .default)
         }
         else if theme[0] == "shapeScape" {
-            // TO DO: distinguish based on card content
-            // TO DO: another function that parses out the shape based on the string??
+            // TO DO: add in bezier curve
+            // TO DO: figure out rectangle, capsule, triangle shapes sizes (aspectRatio)
+            // TO DO: figure out why circle is purple and stroke is red
             ShapeReturn(shape: card.content)
         }
         else {

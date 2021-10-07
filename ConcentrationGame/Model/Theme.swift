@@ -128,6 +128,6 @@ func buildRandom() -> Theme {
         color: themes[Int.random(in: 0 ... themes.count)].color,
         numberOfPairsOfCards: Int.random(in: 3...10)
     )
-    print(random)
+    
     return random
 }

@@ -108,8 +108,6 @@ struct EmojiGameView: View {
     
     private struct CardConstants {
         static let aspectRatio: CGFloat = 2/3
-        // TO DO: get rid of color and instead do emojiGame.color
-        // static let color = Color.blue
         static let deckWidth: CGFloat = deckHeight * aspectRatio
         static let deckHeight: CGFloat = 150
         static let dealDuration = 0.5

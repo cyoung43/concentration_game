@@ -18,58 +18,61 @@ struct ShapeReturn: View {
     @ViewBuilder
     private func matchShape(shape: String) -> some View {
         switch shape {
-        case "circle":
-            ZStack {
+            case "circle":
+                ZStack {
+                    Circle()
+                        .foregroundColor(.red)
+                    Circle()
+                        .stroke(.red, lineWidth: 3)
+                }
                 Circle()
-                    .foregroundColor(.red)
-                Circle()
-                    .stroke(.red, lineWidth: 3)
-            }
-            Circle()
-        case "capsule":
-            ZStack {
-                Capsule()
-                    .foregroundColor(.blue)
-                Capsule()
-                    .stroke(.blue, lineWidth: 3)
-            }
-        case "rectangle":
-            ZStack {
-                Rectangle()
-                    .foregroundColor(.gray)
-                Rectangle()
-                    .stroke(.gray, lineWidth: 3)
-            }
-        case "triangle":
-            ZStack {
-                Triangle()
-                    .foregroundColor(.green)
-                Triangle()
-                    .stroke(.green, lineWidth: 3)
-            }
-        case "hexagon":
-            ZStack {
-                Polygon(sides: 6, angle: 90)
-                    .foregroundColor(.orange)
-                Polygon(sides: 6, angle: 90)
-                    .stroke(.orange, lineWidth: 3)
-            }
-        case "octagon":
-            ZStack {
-                Polygon(sides: 8, angle: 90)
-                    .foregroundColor(.yellow)
-                Polygon(sides: 8, angle: 90)
-                    .stroke(.yellow, lineWidth: 3)
-            }
-        default:
-            ZStack {
-                Circle()
-                    .foregroundColor(.brown)
-                Circle()
-                    .stroke(.brown, lineWidth: 3)
-            }
+            case "capsule":
+                ZStack {
+                    Capsule()
+                        .foregroundColor(.blue)
+                    Capsule()
+                        .stroke(.blue, lineWidth: 3)
+                }
+                .aspectRatio(1/2, contentMode: .fit)
+            case "rectangle":
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.gray)
+                    Rectangle()
+                        .stroke(.gray, lineWidth: 3)
+                }
+                .aspectRatio(1/2, contentMode: .fit)
+            case "triangle":
+                ZStack {
+                    Triangle()
+                        .foregroundColor(.green)
+                    Triangle()
+                        .stroke(.green, lineWidth: 3)
+                }
+                .aspectRatio(1/2, contentMode: .fit)
+            case "hexagon":
+                ZStack {
+                    Polygon(sides: 6, angle: 90)
+                        .foregroundColor(.orange)
+                    Polygon(sides: 6, angle: 90)
+                        .stroke(.orange, lineWidth: 3)
+                }
+            case "octagon":
+                ZStack {
+                    Polygon(sides: 8, angle: 90)
+                        .foregroundColor(.yellow)
+                    Polygon(sides: 8, angle: 90)
+                        .stroke(.yellow, lineWidth: 3)
+                }
+            default:
+                ZStack {
+                    Circle()
+                        .foregroundColor(.brown)
+                    Circle()
+                        .stroke(.brown, lineWidth: 3)
+                }
             
-            // TO DO: Make sure to put the squiggle here later
+            // TO DO: Make sure to put the squiggle here later as the default
         }
     }
 
