@@ -2,11 +2,12 @@
 //  SquareAnimation.swift
 //  ConcentrationGame
 //
-//  Created by New User on 10/7/21.
+//  Created by Chris Young on 10/7/21.
 //
 
 import SwiftUI
 
+// TO DO: Rename to rectangleAnimation
 struct SquareAnimation: View {
     var height: CGFloat
     var width: CGFloat
@@ -15,8 +16,7 @@ struct SquareAnimation: View {
         RoundedRectangle(cornerRadius: 10)
             .opacity(0.4)
             .foregroundColor(.blue)
-            .frame(width: 150, height: 250)
-            .padding()
+            .frame(width: width, height: height)
     }
 }
 

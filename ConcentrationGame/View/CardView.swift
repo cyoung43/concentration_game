@@ -2,7 +2,7 @@
 //  CardView.swift
 //  CardView
 //
-//  Created by New User on 9/10/21.
+//  Created by Chris Young on 9/10/21.
 //
 
 import SwiftUI
@@ -10,15 +10,16 @@ import SwiftUI
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
     var theme: [String]
-    // TO DO: add in var theme: String
     
     @State private var animatedBonusRemaining = 0.0
+    @State private var width = 0.0
+    @State private var height = 0.0
     
     var body: some View {
         GeometryReader { geometry in
             if !card.isMatched || card.isFaceUp {
                 ZStack {
-                    if theme[0] != "random" {
+                    if theme[0] != "templeMatch" {
                         if card.isConsumingBonusTime {
                             Pie(startAngle: angle(for: 0), endAngle: angle(for: -animatedBonusRemaining))
                                 .padding(geometry.size.width * 0.03)
@@ -37,10 +38,21 @@ struct CardView: View {
                         }
                     }
                     else {
-                        SquareAnimation(height: geometry.size.height * 2, width: geometry.size.width * 2)
+                        if card.isConsumingBonusTime {
+                            SquareAnimation(height: height, width: width)
+                                .onAppear {
+                                    height = geometry.size.height
+                                    width = geometry.size.width
+                                    withAnimation(.linear(duration: card.bonusTimeRemaining)) {
+                                        height = 0
+                                        width = 0
+                                    }
+                                }
+                        }
+                        else {
+                            SquareAnimation(height: 0, width: 0)
+                        }
                     }
-                    // TO DO: function for the content of the theme
-                    // switch on theme
                     cardBody(size: geometry.size)
                     
                 }
@@ -65,12 +77,7 @@ struct CardView: View {
         }
         else if theme[0] == "shapeScape" {
             // TO DO: add in bezier curve
-            // TO DO: figure out rectangle, capsule, triangle shapes sizes (aspectRatio)
-            // TO DO: figure out why circle is purple and stroke is red
             ShapeReturn(shape: card.content)
-        }
-        else if theme[0] == "random" {
-            Text("r1")
         }
         else {
             Text(card.content)
@@ -97,12 +104,8 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "r1"), theme: ["random", "Random"])
+        CardView(card: ConcentrationGame<String>.Card(isFaceUp: true, isMatched: false, content: "🥝"), theme: [GameType.emojiMojo.rawValue, "People"])
             .foregroundColor(.blue)
             .padding(50)
     }
 }
-
-
-// content: "🥝"
-// theme: [GameType.emojiMojo.rawValue, "People"]
