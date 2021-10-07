@@ -65,6 +65,18 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         }
     }
     
+    func isGameStillGoing(cards: [Card]) {
+        let check = cards.allSatisfy { $0.isMatched }
+        
+        if check {
+            
+        }
+    }
+    
+    func gameIsFinished(name: String) {
+        // TO DO: check if there is a new high score based on the name, theme, and overall high score
+    }
+    
     struct Card: Identifiable {
         var isFaceUp = false {
             didSet {

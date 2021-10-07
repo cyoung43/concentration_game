@@ -52,8 +52,6 @@ struct EmojiGameView: View {
         .frame(width: CardConstants.deckWidth, height: CardConstants.deckHeight)
         .padding(.bottom)
         .onTapGesture {
-            emojiGame.soundPlayer.playSound(named: "shuffle_deck")
-            
             for card in emojiGame.cards {
                 withAnimation(dealAnimation(for: card)) {
                     deal(card)
