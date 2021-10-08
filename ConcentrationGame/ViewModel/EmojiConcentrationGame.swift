@@ -12,6 +12,7 @@ class EmojiConcentrationGame: ObservableObject {
     @Published private var game: ConcentrationGame<String>
     
     var player = SoundPlayer()
+    let defaults = UserDefaults.standard
     
     init(_ theme: [String]) {
         game = EmojiConcentrationGame.createGame(theme: theme)
@@ -59,11 +60,8 @@ class EmojiConcentrationGame: ObservableObject {
     func choose(_ card: ConcentrationGame<String>.Card) {
         game.choose(card)
         print(card)
-        if card.isMatched {
+        if defaults.bool(forKey: "audioSettings") {
             player.playSound(named: "whoosh_boom")
-        }
-        else {
-            player.playSound(named: "firework_rocket_launch.mp3")
         }
         
         game.isGameStillGoing(gameType: theme[1])
@@ -75,6 +73,23 @@ class EmojiConcentrationGame: ObservableObject {
     
     func gameOver() {
         game.gameOver = true
+    }
+    
+    func changeAudioSetting(audio: Bool) {
+        defaults.set(audio, forKey: "audioSettings")
+    }
+    
+    // TO DO: how to access settings
+    func getCurrentAudioSettings() -> Bool {
+        var userAudio = defaults.bool(forKey: "audioSettings")
+        
+        if !userAudio {
+            defaults.set(false, forKey: "audioSettings")
+        }
+        
+        userAudio = defaults.bool(forKey: "audioSettings")
+        
+        return userAudio
     }
     
     private func convertColor(from string: String) -> Color {
