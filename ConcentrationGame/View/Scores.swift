@@ -2,7 +2,7 @@
 //  Scores.swift
 //  ConcentrationGame
 //
-//  Created by New User on 10/6/21.
+//  Created by Chris Young on 10/6/21.
 //
 
 import SwiftUI
@@ -10,23 +10,37 @@ import SwiftUI
 struct Scores: View {
     var body: some View {
         NavigationView {
-            List {
-                Section(header: Text("All Time High Score")) {
-                    Text("\(UserDefaults.standard.integer(forKey: "highScore"))")
+                List {
+                    Section(header: Text("All Time High Score")) {
+                        HStack {
+                            Text("All Game Modes")
+                            Spacer()
+                            Text("\(UserDefaults.standard.integer(forKey: "highScore"))")
+                        }
+                    }
+                    
+                    ForEach (gameModes) { type in
+                        Section(header: Text(type.name)) {
+                            scoreBody(type: type)
+                        }
+                    }
                 }
-                Section(header: Text("EmojiMojo: People")) {
-                    Text("High score for people")
-                }
-                
-                // TO DO: fill in the rest of the themes and etc.
-                Text("List item 1")
-                Text("List item 2")
-                Text("List item 3")
-            }
-            .edgesIgnoringSafeArea(.bottom)
-            .navigationTitle("High Scores")
+                .edgesIgnoringSafeArea(.bottom)
+                .navigationTitle("High Scores")
         }
-        
+    }
+    
+    @ViewBuilder
+    func scoreBody(type: HelperTheme) -> some View {
+        ForEach (themes) { theme in
+            if theme.gameType == type.gameType {
+                HStack {
+                    Text("\(theme.name)")
+                    Spacer()
+                    Text("\(UserDefaults.standard.integer(forKey: theme.name))")
+                }
+            }
+        }
     }
 }
 

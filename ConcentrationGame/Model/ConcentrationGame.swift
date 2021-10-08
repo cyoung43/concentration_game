@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import CoreAudio
+import SwiftUI
 
 struct ConcentrationGame<CardContent> where CardContent: Equatable {
     private(set) var cards: Array<Card>
@@ -87,9 +89,28 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
             userDefaults.set(score, forKey: "highScore")
         }
         
+        if let themeScore = userDefaults.string(forKey: theme) {
+            if score > Int(themeScore) ?? 0 {
+                userDefaults.set(score, forKey: theme)
+            }
+        }
+        else {
+            userDefaults.set(score, forKey: theme)
+        }
         
-        
-        print(userDefaults.integer(forKey: "highScore"))
+        themes = themes.map { (gameTheme: Theme) -> Theme in
+            var mutableGameTheme = gameTheme
+            
+            if mutableGameTheme.name == theme && score > mutableGameTheme.highScore {
+                mutableGameTheme.updateHighScore(newScore: score)
+            }
+            
+            return mutableGameTheme
+        }
+
+        print(themes)
+        print("highscore: \(userDefaults.integer(forKey: "highScore"))")
+        print("\(theme): \(userDefaults.integer(forKey: "highScore"))")
     }
     
     struct Card: Identifiable {

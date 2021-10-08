@@ -66,7 +66,7 @@ class EmojiConcentrationGame: ObservableObject {
             player.playSound(named: "firework_rocket_launch.mp3")
         }
         
-        game.isGameStillGoing(gameType: theme[0])
+        game.isGameStillGoing(gameType: theme[1])
     }
     
     func newGame() -> Void {

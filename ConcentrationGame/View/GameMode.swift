@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GameMode: View {
     var gameType: GameType
-    // @State var navTitle: String = getPageTitle(gameType: gameType)
     
     var body: some View {
         NavigationView {

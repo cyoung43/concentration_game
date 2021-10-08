@@ -21,9 +21,13 @@ struct Theme: Identifiable, Hashable {
     var color: String
     var numberOfPairsOfCards: Int
     var highScore: Int
+    
+    mutating func updateHighScore(newScore: Int) {
+        highScore = newScore
+    }
 }
 
-let themes = [
+var themes = [
     Theme(
         name: "People",
         gameType: .emojiMojo,
@@ -142,4 +146,13 @@ func buildRandom() -> Theme {
     )
     
     return random
+}
+
+// helper variable to iterate through game types
+let gameModes: [HelperTheme] = [HelperTheme(gameType: .emojiMojo, name: "Emoji Mojo"), HelperTheme(gameType: .shapeScape, name: "Shape Scape"), HelperTheme(gameType: .templeMatch, name: "Temple Match")]
+
+struct HelperTheme: Identifiable, Hashable {
+    var id = UUID()
+    var gameType: GameType
+    var name: String
 }
