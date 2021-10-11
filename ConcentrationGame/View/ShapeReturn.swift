@@ -33,7 +33,7 @@ struct ShapeReturn: View {
                         .stroke(.blue, lineWidth: 3)
                 }
                 .aspectRatio(1/2, contentMode: .fit)
-                .padding(15)
+                .padding(16)
             case "rectangle":
                 ZStack {
                     Rectangle()
@@ -42,7 +42,7 @@ struct ShapeReturn: View {
                         .stroke(.gray, lineWidth: 3)
                 }
                 .aspectRatio(1/2, contentMode: .fit)
-                .padding(15)
+                .padding(16)
             case "triangle":
                 ZStack {
                     Triangle()
@@ -50,7 +50,7 @@ struct ShapeReturn: View {
                     Triangle()
                         .stroke(.green, lineWidth: 3)
                 }
-                .padding(15)
+                .padding(16)
                 .aspectRatio(1/2, contentMode: .fit)
             case "hexagon":
                 ZStack {
@@ -69,10 +69,12 @@ struct ShapeReturn: View {
             case "squiggle":
                 ZStack {
                     Squiggle()
+                        .padding(13)
                 }
             default:
                 ZStack {
                     Squiggle()
+                        .padding(13)
                 }
             
             // TO DO: Make sure to put the squiggle here later as the default

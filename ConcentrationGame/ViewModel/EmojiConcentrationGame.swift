@@ -60,7 +60,7 @@ class EmojiConcentrationGame: ObservableObject {
     func choose(_ card: ConcentrationGame<String>.Card) {
         game.choose(card)
         print(card)
-        if defaults.bool(forKey: "audioSettings") {
+        if defaults.bool(forKey: "soundEnabled") {
             player.playSound(named: "whoosh_boom")
         }
         
@@ -73,23 +73,6 @@ class EmojiConcentrationGame: ObservableObject {
     
     func gameOver() {
         game.gameOver = true
-    }
-    
-    func changeAudioSetting(audio: Bool) {
-        defaults.set(audio, forKey: "audioSettings")
-    }
-    
-    // TO DO: how to access settings
-    func getCurrentAudioSettings() -> Bool {
-        var userAudio = defaults.bool(forKey: "audioSettings")
-        
-        if !userAudio {
-            defaults.set(false, forKey: "audioSettings")
-        }
-        
-        userAudio = defaults.bool(forKey: "audioSettings")
-        
-        return userAudio
     }
     
     private func convertColor(from string: String) -> Color {

@@ -74,19 +74,22 @@ struct CardView: View {
             }
             .padding(size.width * 0.03)
             .rotation3DEffect(Angle.degrees(card.isMatched ? 360 : 0), axis: (x: 0, y: 1, z: 0))
-            .animation(card.isMatched ? .linear(duration: 2.0).repeatForever(autoreverses: false) : .default)
+            .animation(card.isMatched ? .linear(duration: 2.0).repeatForever(autoreverses: false) : .default,
+                       value: card.isMatched)
         }
         else if theme[0] == "shapeScape" {
             // TO DO: add in bezier curve
             ShapeReturn(shape: card.content)
                 .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default)
+                .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default,
+                           value: card.isMatched)
         }
         else {
             Text(card.content)
                 .font(systemFont(for: size))
                 .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
-                .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default)
+                .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default,
+                           value: card.isMatched)
         }
     }
     

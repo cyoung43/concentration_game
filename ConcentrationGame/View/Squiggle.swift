@@ -48,7 +48,8 @@ struct Squiggle: View {
         ZStack {
             SquiggleShape()
                 .foregroundColor(.gray)
-            SquiggleShape().stroke(lineWidth: 4)
+            SquiggleShape()
+                .stroke(.black, lineWidth: 4)
         }
         
     }
@@ -57,9 +58,6 @@ struct Squiggle: View {
 struct Squiggle_Previews: PreviewProvider {
     static var previews: some View {
         HStack {
-            Squiggle()
-                .foregroundColor(.purple)
-                .padding()
             Squiggle()
                 .padding()
         }
