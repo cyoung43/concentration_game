@@ -9,11 +9,10 @@ import SwiftUI
 
 // TO DO: reset to 8 after user changes back to default settings
 struct GameSettings: View {
-    @State private var gameSounds = EmojiConcentrationGame.getCurrentAudioSetting()
+    @State private var gameSounds = true
     @State private var defaultCards = true
     @State private var userNumberOfCards: Int = 8
-    
-    var body: some View {
+        var body: some View {
         NavigationView {
             List {
                 Section(header: Text("Sound Effects")) {

@@ -36,6 +36,7 @@
 		B2C13F25270F3934000A14C1 /* basketball_rim_clank.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F20270F3934000A14C1 /* basketball_rim_clank.mp3 */; };
 		B2C13F26270F3934000A14C1 /* shuffle_deck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F21270F3934000A14C1 /* shuffle_deck.mp3 */; };
 		B2C13F28270F760D000A14C1 /* SquareAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F27270F760D000A14C1 /* SquareAnimation.swift */; };
+		B2C13F2C2714D654000A14C1 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F2B2714D654000A14C1 /* Squiggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		B2C13F20270F3934000A14C1 /* basketball_rim_clank.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = basketball_rim_clank.mp3; sourceTree = "<group>"; };
 		B2C13F21270F3934000A14C1 /* shuffle_deck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shuffle_deck.mp3; sourceTree = "<group>"; };
 		B2C13F27270F760D000A14C1 /* SquareAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareAnimation.swift; sourceTree = "<group>"; };
+		B2C13F2B2714D654000A14C1 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				B2C13F07270D0652000A14C1 /* ShapeReturn.swift */,
 				B2C13F19270E69B1000A14C1 /* Scores.swift */,
 				B2C13F27270F760D000A14C1 /* SquareAnimation.swift */,
+				B2C13F2B2714D654000A14C1 /* Squiggle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C13F2C2714D654000A14C1 /* Squiggle.swift in Sources */,
 				B27B41A526EC439500DA34EF /* ArrayIdentifiable.swift in Sources */,
 				B278BEB926E9938D00BA7893 /* EmojiConcentrationGame.swift in Sources */,
 				B2C13F02270CE008000A14C1 /* GameSettings.swift in Sources */,

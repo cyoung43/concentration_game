@@ -79,6 +79,8 @@ struct CardView: View {
         else if theme[0] == "shapeScape" {
             // TO DO: add in bezier curve
             ShapeReturn(shape: card.content)
+                .rotationEffect(Angle.degrees(card.isMatched ? 360 : 0))
+                .animation(card.isMatched ? .linear(duration: 1.0).repeatForever(autoreverses: false) : .default)
         }
         else {
             Text(card.content)

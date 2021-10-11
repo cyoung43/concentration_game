@@ -66,12 +66,13 @@ struct ShapeReturn: View {
                     Polygon(sides: 8, angle: 90)
                         .stroke(.yellow, lineWidth: 3)
                 }
+            case "squiggle":
+                ZStack {
+                    Squiggle()
+                }
             default:
                 ZStack {
-                    Circle()
-                        .foregroundColor(.brown)
-                    Circle()
-                        .stroke(.brown, lineWidth: 3)
+                    Squiggle()
                 }
             
             // TO DO: Make sure to put the squiggle here later as the default
@@ -82,6 +83,6 @@ struct ShapeReturn: View {
 
 struct ShapeReturn_Previews: PreviewProvider {
     static var previews: some View {
-        ShapeReturn(shape: "octagon")
+        ShapeReturn(shape: "squiggle")
     }
 }
