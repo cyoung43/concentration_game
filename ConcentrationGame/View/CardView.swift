@@ -73,8 +73,9 @@ struct CardView: View {
                     .scaledToFit()
             }
             .padding(size.width * 0.03)
-            .rotation3DEffect(Angle.degrees(card.isMatched ? 360 : 0), axis: (x: 0, y: 1, z: 0))
-            .animation(card.isMatched ? .linear(duration: 2.0).repeatForever(autoreverses: false) : .default,
+            //.rotation3DEffect(Angle.degrees(card.isMatched ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+            .scaleEffect(card.isMatched ? 0.5 : 1)
+            .animation(card.isMatched ? .easeInOut(duration: 1.0).repeatForever(autoreverses: true) : .default,
                        value: card.isMatched)
         }
         else if theme[0] == "shapeScape" {
