@@ -23,7 +23,7 @@ struct SoundPlayer {
             player?.play()
         }
         catch {
-            
+            // Ignore
         }
     }
 }

@@ -37,6 +37,7 @@
 		B2C13F26270F3934000A14C1 /* shuffle_deck.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F21270F3934000A14C1 /* shuffle_deck.mp3 */; };
 		B2C13F28270F760D000A14C1 /* SquareAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F27270F760D000A14C1 /* SquareAnimation.swift */; };
 		B2C13F2C2714D654000A14C1 /* Squiggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13F2B2714D654000A14C1 /* Squiggle.swift */; };
+		B2C13F2E27164A4F000A14C1 /* whoosh_boom.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B2C13F2D27164A4F000A14C1 /* whoosh_boom.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +97,7 @@
 		B2C13F21270F3934000A14C1 /* shuffle_deck.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = shuffle_deck.mp3; sourceTree = "<group>"; };
 		B2C13F27270F760D000A14C1 /* SquareAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareAnimation.swift; sourceTree = "<group>"; };
 		B2C13F2B2714D654000A14C1 /* Squiggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Squiggle.swift; sourceTree = "<group>"; };
+		B2C13F2D27164A4F000A14C1 /* whoosh_boom.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = whoosh_boom.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				B2C13F1D270F3934000A14C1 /* distant_fireworks.mp3 */,
 				B2C13F1F270F3934000A14C1 /* firework_rocket_launch.mp3 */,
 				B2C13F21270F3934000A14C1 /* shuffle_deck.mp3 */,
+				B2C13F2D27164A4F000A14C1 /* whoosh_boom.m4a */,
 				B2C13F1E270F3934000A14C1 /* whoosh_boom.mp3 */,
 			);
 			path = Sounds;
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2C13F24270F3934000A14C1 /* firework_rocket_launch.mp3 in Resources */,
+				B2C13F2E27164A4F000A14C1 /* whoosh_boom.m4a in Resources */,
 				B2C13F26270F3934000A14C1 /* shuffle_deck.mp3 in Resources */,
 				B278BEB026E98ACE00BA7893 /* Preview Assets.xcassets in Resources */,
 				B2C13F25270F3934000A14C1 /* basketball_rim_clank.mp3 in Resources */,

@@ -9,6 +9,7 @@ import SwiftUI
 
 // TO DO: reset to 8 after user changes back to default settings
 struct GameSettings: View {
+    // call this from the viewmodel
     static let playSoundKey = "soundEnabled"
     static let defaultCardsKey = "pairsOfCards"
     static let numberOfCards = "numberOfCards"

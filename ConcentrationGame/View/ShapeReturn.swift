@@ -71,10 +71,21 @@ struct ShapeReturn: View {
                     Squiggle()
                         .padding(13)
                 }
+            case "roundedrectangle":
+                ZStack {
+                    RoundedRectangle(cornerRadius: 22)
+                        .foregroundColor(.indigo)
+                }
+            case "ellipse":
+                ZStack {
+                    Ellipse()
+                        .foregroundColor(.cyan)
+                }
             default:
                 ZStack {
                     Squiggle()
                         .padding(13)
+                        .foregroundColor(.mint)
                 }
         }
     }

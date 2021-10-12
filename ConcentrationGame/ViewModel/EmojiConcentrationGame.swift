@@ -58,10 +58,19 @@ class EmojiConcentrationGame: ObservableObject {
     // MARK: - Intents
     
     func choose(_ card: ConcentrationGame<String>.Card) {
+        let score1 = game.score
         game.choose(card)
+        let score2 = game.score
+        // player.playSound(named: "whoosh_boom.mp3")
+        // include full path
         
-        if defaults.bool(forKey: "enableSound") {
-            player.playSound(named: "whoosh_boom")
+        if defaults.bool(forKey: GameSettings.playSoundKey) {
+            if score2 > score1 {
+                player.playSound(named: "whoosh_boom.m4a")
+            }
+            else {
+                player.playSound(named: "basketball_rim_clank.mp3")
+            }
         }
         
         game.isGameStillGoing(gameType: theme[1])
@@ -93,8 +102,16 @@ class EmojiConcentrationGame: ObservableObject {
                 return Color.orange
             case "pink":
                 return Color.pink
+            case "indigo":
+                return Color.indigo
             default:
                 return Color.blue
         }
     }
 }
+
+
+// TO DO: Questions
+//          1. sound issues
+//          2. building several versions of a game in the navigation part
+//          3. random theme is blue every single time

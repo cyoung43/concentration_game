@@ -80,7 +80,7 @@ var themes = [
     Theme(
         name: "Shape Scape",
         gameType: .shapeScape,
-        content: ["circle", "rectangle", "capsule", "triangle", "hexagon", "octagon", "squiggle"],
+        content: ["circle", "rectangle", "capsule", "triangle", "hexagon", "octagon", "squiggle", "ellipse", "roundedrectangle", "circle"],
         color: "purple",
         numberOfPairsOfCards: 8,
         highScore: 0

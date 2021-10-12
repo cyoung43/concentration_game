@@ -26,7 +26,6 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     
     // TO DO: add in theme here to be added to the gametype
     init(numberOfPairsOfCards: Int, theme: [String], cardContentFactory: (Int) -> CardContent) {
-        print(numberOfPairsOfCards)
         
         cards = Array<Card>()
         
@@ -72,7 +71,6 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     mutating func isGameStillGoing(gameType theme: String) {
         let check = cards.allSatisfy { $0.isMatched }
         
-        // TO DO: mark gameOver as true
         if check {
             gameOver = true
             gameIsFinished(theme: theme)
@@ -81,7 +79,7 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     
     func gameIsFinished(theme: String) {
         let userDefaults = UserDefaults.standard
-        // TO DO: check if there is a new high score based on the name, theme, and overall high score
+        
         if let highScore = userDefaults.string(forKey: "highScore") {
             if score > Int(highScore) ?? 0 {
                 userDefaults.set(score, forKey: "highScore")
@@ -109,10 +107,6 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
             
             return mutableGameTheme
         }
-
-        print(themes)
-        print("highscore: \(userDefaults.integer(forKey: "highScore"))")
-        print("\(theme): \(userDefaults.integer(forKey: "highScore"))")
     }
     
     struct Card: Identifiable {
