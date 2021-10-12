@@ -26,9 +26,11 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     
     // TO DO: add in theme here to be added to the gametype
     init(numberOfPairsOfCards: Int, theme: [String], cardContentFactory: (Int) -> CardContent) {
+        print(numberOfPairsOfCards)
+        
         cards = Array<Card>()
+        
         self.theme = theme
-        print(theme)
         
         for pairIndex in 0 ..< numberOfPairsOfCards {
             let content = cardContentFactory(pairIndex)

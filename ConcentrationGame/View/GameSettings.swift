@@ -11,6 +11,7 @@ import SwiftUI
 struct GameSettings: View {
     static let playSoundKey = "soundEnabled"
     static let defaultCardsKey = "pairsOfCards"
+    static let numberOfCards = "numberOfCards"
     
     @State private var gameSounds = UserDefaults.standard.bool(forKey: playSoundKey)
     @State private var defaultCards = UserDefaults.standard.bool(forKey: defaultCardsKey)
@@ -41,6 +42,15 @@ struct GameSettings: View {
                 }
                 HStack {
                     Stepper("Pairs of Cards: \(defaultCards ? 8 : userNumberOfCards)", value: $userNumberOfCards, in: 3...10)
+                        .onAppear {
+                            userNumberOfCards = UserDefaults.standard.integer(forKey: GameSettings.numberOfCards) > 0 ? UserDefaults.standard.integer(forKey: GameSettings.numberOfCards) : 8
+                            print(userNumberOfCards)
+                            print(UserDefaults.standard.integer(forKey: GameSettings.numberOfCards))
+                        }
+                        .onDisappear {
+                            UserDefaults.standard.set(userNumberOfCards, forKey: GameSettings.numberOfCards)
+                            print(UserDefaults.standard.set(userNumberOfCards, forKey: GameSettings.numberOfCards))
+                        }
                 }
                 .disabled(defaultCards)
             }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// TO DO: figure out how to pause animation once the match is made for temples
+// TO DO: figure out how to pause timer animation once the match is made for temples
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
     var theme: [String]

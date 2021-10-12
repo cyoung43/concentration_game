@@ -26,7 +26,7 @@ class EmojiConcentrationGame: ObservableObject {
             gameTheme.insert(buildRandom(), at: 0)
         }
         
-        return ConcentrationGame<String>(numberOfPairsOfCards: (theme[0] != "templeMatch" ? Int.random(in: 3 ... gameTheme[0].content.count): 4), theme: theme) { index in
+        return ConcentrationGame<String>(numberOfPairsOfCards: !UserDefaults.standard.bool(forKey: "pairsOfCards") ? theme[0] == "templeMatch" ? 4 : Int.random(in: 3 ... gameTheme[0].content.count): UserDefaults.standard.integer(forKey: "numberOfCards"), theme: theme) { index in
             gameTheme[0].content[index]
         }
     }
@@ -63,8 +63,6 @@ class EmojiConcentrationGame: ObservableObject {
         if defaults.bool(forKey: "enableSound") {
             player.playSound(named: "whoosh_boom")
         }
-        
-        player.playSound(named: "whoosh_boom")
         
         game.isGameStillGoing(gameType: theme[1])
     }

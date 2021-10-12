@@ -2,7 +2,7 @@
 //  GameMode.swift
 //  ConcentrationGame
 //
-//  Created by New User on 10/4/21.
+//  Created by Chris Young on 10/4/21.
 //
 
 import SwiftUI

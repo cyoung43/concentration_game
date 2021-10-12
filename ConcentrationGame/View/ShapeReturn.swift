@@ -76,8 +76,6 @@ struct ShapeReturn: View {
                     Squiggle()
                         .padding(13)
                 }
-            
-            // TO DO: Make sure to put the squiggle here later as the default
         }
     }
 
