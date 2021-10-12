@@ -26,7 +26,7 @@ class EmojiConcentrationGame: ObservableObject {
             gameTheme.insert(buildRandom(), at: 0)
         }
         
-        return ConcentrationGame<String>(numberOfPairsOfCards: !UserDefaults.standard.bool(forKey: "pairsOfCards") ? theme[0] == "templeMatch" ? 4 : Int.random(in: 3 ... gameTheme[0].content.count): UserDefaults.standard.integer(forKey: "numberOfCards"), theme: theme) { index in
+        return ConcentrationGame<String>(numberOfPairsOfCards: UserDefaults.standard.bool(forKey: "pairsOfCards") ? theme[0] == "templeMatch" ? 4 : Int.random(in: 3 ... gameTheme[0].content.count): UserDefaults.standard.integer(forKey: "numberOfCards"), theme: theme) { index in
             gameTheme[0].content[index]
         }
     }
