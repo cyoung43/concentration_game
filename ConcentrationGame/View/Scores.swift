@@ -14,7 +14,7 @@ struct Scores: View {
                 HStack {
                     Text("All Game Modes")
                     Spacer()
-                    Text("\(UserDefaults.standard.integer(forKey: "highScore"))")
+                    Text("\(UserDefaults.standard.integer(forKey: "highScore") > 0 ? String(UserDefaults.standard.integer(forKey: "highScore")) : "Never played")")
                 }
             }
             
@@ -36,7 +36,7 @@ struct Scores: View {
                 HStack {
                     Text("\(theme.name)")
                     Spacer()
-                    Text("\(UserDefaults.standard.integer(forKey: theme.name))")
+                    Text("\(UserDefaults.standard.integer(forKey: theme.name) > 0 ? String(UserDefaults.standard.integer(forKey: theme.name)) : "Never played")")
                 }
             }
         }
