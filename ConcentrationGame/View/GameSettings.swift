@@ -17,38 +17,36 @@ struct GameSettings: View {
     @State private var userNumberOfCards: Int = 8
     
     var body: some View {
-        NavigationView {
-            List {
-                Section(header: Text("Sound Effects")) {
-                    HStack {
-                        Toggle("Game Sounds", isOn: $gameSounds)
-                            .onAppear {
-                                gameSounds = UserDefaults.standard.bool(forKey: GameSettings.playSoundKey)
-                            }
-                            .onDisappear {
-                                UserDefaults.standard.set(gameSounds, forKey: GameSettings.playSoundKey)
-                            }
-                    }
-                }
-                Section(header: Text("Pairs of Cards")) {
-                    HStack {
-                        Toggle("Default", isOn: $defaultCards)
-                            .onAppear {
-                                defaultCards = UserDefaults.standard.bool(forKey: GameSettings.defaultCardsKey)
-                            }
-                            .onDisappear {
-                                UserDefaults.standard.set(defaultCards, forKey: GameSettings.defaultCardsKey)
-                            }
-                    }
-                    HStack {
-                        Stepper("Pairs of Cards: \(defaultCards ? 8 : userNumberOfCards)", value: $userNumberOfCards, in: 3...10)
-                    }
-                    .disabled(defaultCards)
+        List {
+            Section(header: Text("Sound Effects")) {
+                HStack {
+                    Toggle("Game Sounds", isOn: $gameSounds)
+                        .onAppear {
+                            gameSounds = UserDefaults.standard.bool(forKey: GameSettings.playSoundKey)
+                        }
+                        .onDisappear {
+                            UserDefaults.standard.set(gameSounds, forKey: GameSettings.playSoundKey)
+                        }
                 }
             }
-            
-            .navigationTitle("Game Settings")
+            Section(header: Text("Pairs of Cards")) {
+                HStack {
+                    Toggle("Default", isOn: $defaultCards)
+                        .onAppear {
+                            defaultCards = UserDefaults.standard.bool(forKey: GameSettings.defaultCardsKey)
+                        }
+                        .onDisappear {
+                            UserDefaults.standard.set(defaultCards, forKey: GameSettings.defaultCardsKey)
+                        }
+                }
+                HStack {
+                    Stepper("Pairs of Cards: \(defaultCards ? 8 : userNumberOfCards)", value: $userNumberOfCards, in: 3...10)
+                }
+                .disabled(defaultCards)
+            }
         }
+        .navigationTitle("Game Settings")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

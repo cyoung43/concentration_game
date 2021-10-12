@@ -14,27 +14,22 @@ struct EmojiGameView: View {
     @Namespace private var dealingCards
     
     var body: some View {
-        NavigationView {
-            ZStack(alignment: .bottom) {
-                deckBody
-                gameBody
-            }
-            .edgesIgnoringSafeArea(.bottom)
-            .navigationTitle("Score: \(emojiGame.score)")
-            .navigationBarItems(leading: NavigationLink(destination: GameNavigation()
-                    .navigationBarBackButtonHidden(true)
-                    .navigationBarHidden(true)) {
-                    Image(systemName: "arrow.backward")
-                // TO DO: adjust transition animation here
-                }
-                    .transition(.move(edge: .trailing)),
-                trailing: Button("New Game") {
+        ZStack(alignment: .bottom) {
+            deckBody
+            gameBody
+        }
+        .edgesIgnoringSafeArea(.bottom)
+        .navigationTitle("Score: \(emojiGame.score)")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("New Game") {
                     withAnimation(.linear) {
                         emojiGame.newGame()
                     }
-            })
-            .navigationBarTitleDisplayMode(.inline)
+                }
+            }
         }
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     var deckBody: some View {

@@ -9,25 +9,24 @@ import SwiftUI
 
 struct Scores: View {
     var body: some View {
-        NavigationView {
-                List {
-                    Section(header: Text("All Time High Score")) {
-                        HStack {
-                            Text("All Game Modes")
-                            Spacer()
-                            Text("\(UserDefaults.standard.integer(forKey: "highScore"))")
-                        }
-                    }
-                    
-                    ForEach (gameModes) { type in
-                        Section(header: Text(type.name)) {
-                            scoreBody(type: type)
-                        }
-                    }
+        List {
+            Section(header: Text("All Time High Score")) {
+                HStack {
+                    Text("All Game Modes")
+                    Spacer()
+                    Text("\(UserDefaults.standard.integer(forKey: "highScore"))")
                 }
-                .edgesIgnoringSafeArea(.bottom)
-                .navigationTitle("High Scores")
+            }
+            
+            ForEach (gameModes) { type in
+                Section(header: Text(type.name)) {
+                    scoreBody(type: type)
+                }
+            }
         }
+        .edgesIgnoringSafeArea(.bottom)
+        .navigationTitle("High Scores")
+        .navigationBarTitleDisplayMode(.inline)
     }
     
     @ViewBuilder

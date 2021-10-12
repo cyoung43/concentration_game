@@ -59,10 +59,12 @@ class EmojiConcentrationGame: ObservableObject {
     
     func choose(_ card: ConcentrationGame<String>.Card) {
         game.choose(card)
-        print(card)
-        if defaults.bool(forKey: "soundEnabled") {
+        
+        if defaults.bool(forKey: "enableSound") {
             player.playSound(named: "whoosh_boom")
         }
+        
+        player.playSound(named: "whoosh_boom")
         
         game.isGameStillGoing(gameType: theme[1])
     }
