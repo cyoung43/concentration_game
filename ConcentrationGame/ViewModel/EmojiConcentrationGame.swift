@@ -84,8 +84,8 @@ class EmojiConcentrationGame: ObservableObject {
         game.gameOver = true
     }
     
-    private func convertColor(from string: String) -> Color {
-        switch string {
+    private func convertColor(from color: String) -> Color {
+        switch color {
             case "red":
                 return Color.red
             case "purple":

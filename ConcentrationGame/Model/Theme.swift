@@ -105,17 +105,11 @@ var themes = [
         name: "Utah Temples",
         gameType: .templeMatch,
         content: ["bountiful_temple", "draper_temple", "mount_timpanogos_temple", "taylorsville_temple", "payson_temple", "provo_city_center_temple", "cedar_city_temple", "saratoga_springs_temple"],
-        color: "pink", // TO DO: Find another color here
+        color: "pink",
         numberOfPairsOfCards: 8,
         highScore: 0
     ),
 ]
-
-// TO DO: add in theme colors here?
-// let themeColors = ["temple": Color.blue ...]
-// jk this should be the view model
-
-// for shapes.... write a function for the view. @viewbuilder... here is the shape for that. and here is the shape that we are returning as a some view
 
 
 // TO DO: random color not working.... it's showing blue as a default
