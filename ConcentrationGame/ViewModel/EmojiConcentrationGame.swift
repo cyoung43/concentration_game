@@ -11,20 +11,24 @@ import Foundation
 class EmojiConcentrationGame: ObservableObject {
     @Published private var game: ConcentrationGame<String>
     
-    var player = SoundPlayer()
-    let defaults = UserDefaults.standard
+    private var player = SoundPlayer()
+    private let defaults = UserDefaults.standard
+    static var gameThemes: [Theme] = []
     
     init(_ theme: [String]) {
         game = EmojiConcentrationGame.createGame(theme: theme)
     }
     
-    // TO DO: It seems like 6 different games are starting before it should be. Like in random, if I don't already have items in the content or a number of cards, then it's not working.... Get an index out of range error.
     private static func createGame(theme: [String]) -> ConcentrationGame<String> {
         var gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
         
         if gameTheme[0].name == "Random" {
             gameTheme.insert(buildRandom(), at: 0)
+            gameThemes.insert(gameTheme[0], at: 0)
+            print(gameTheme)
         }
+        
+        print(gameTheme[0])
         
         return ConcentrationGame<String>(numberOfPairsOfCards: UserDefaults.standard.bool(forKey: "pairsOfCards") ? theme[0] == "templeMatch" ? 4 : Int.random(in: 3 ... gameTheme[0].content.count): UserDefaults.standard.integer(forKey: "numberOfCards"), theme: theme) { index in
             gameTheme[0].content[index]
@@ -48,7 +52,7 @@ class EmojiConcentrationGame: ObservableObject {
     var color: Color {
         let gameTheme: [Theme] = themes.filter {$0.name == theme[1]}
         
-        return convertColor(from: gameTheme[0].color)
+        return convertColor(from: gameTheme[0].name == "Random" ? EmojiConcentrationGame.gameThemes[0].color : gameTheme[0].color)
     }
     
     var theme: [String] {
@@ -60,9 +64,8 @@ class EmojiConcentrationGame: ObservableObject {
     func choose(_ card: ConcentrationGame<String>.Card) {
         let score1 = game.score
         game.choose(card)
+        
         let score2 = game.score
-        // player.playSound(named: "whoosh_boom.mp3")
-        // include full path
         
         if defaults.bool(forKey: GameSettings.playSoundKey) {
             if score2 > score1 {
@@ -109,9 +112,3 @@ class EmojiConcentrationGame: ObservableObject {
         }
     }
 }
-
-
-// TO DO: Questions
-//          1. sound issues
-//          2. building several versions of a game in the navigation part
-//          3. random theme is blue every single time

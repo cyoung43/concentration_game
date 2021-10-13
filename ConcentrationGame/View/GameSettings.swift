@@ -33,7 +33,7 @@ struct GameSettings: View {
             }
             Section(header: Text("Pairs of Cards")) {
                 HStack {
-                    Toggle("Default", isOn: $defaultCards)
+                    Toggle("Random", isOn: $defaultCards)
                         .onAppear {
                             defaultCards = UserDefaults.standard.bool(forKey: GameSettings.defaultCardsKey)
                         }
