@@ -96,7 +96,7 @@ var themes = [
     Theme(
         name: "Pioneer Temples",
         gameType: .templeMatch,
-        content: ["salt_lake_temple", "st_george_temple", "nauvoo_temple", "manti_temple", "logan_temple", "mesa_temple", "laie_temple"],
+        content: ["salt_lake_temple", "st_george_temple", "nauvoo_temple", "manti_temple", "logan_temple", "mesa_temple", "laie_temple", "cardston_temple", "switzerland_temple", "idaho_falls_temple"],
         color: "black",
         numberOfPairsOfCards: 8,
         highScore: 0
@@ -104,7 +104,7 @@ var themes = [
     Theme(
         name: "Utah Temples",
         gameType: .templeMatch,
-        content: ["bountiful_temple", "draper_temple", "mount_timpanogos_temple", "taylorsville_temple", "payson_temple", "provo_city_center_temple", "cedar_city_temple", "saratoga_springs_temple"],
+        content: ["bountiful_temple", "draper_temple", "mount_timpanogos_temple", "taylorsville_temple", "payson_temple", "provo_city_center_temple", "cedar_city_temple", "saratoga_springs_temple", "jordan_river_temple", "ogden_temple"],
         color: "pink",
         numberOfPairsOfCards: 8,
         highScore: 0
