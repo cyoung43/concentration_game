@@ -11,7 +11,7 @@ import Foundation
 class EmojiConcentrationGame: ObservableObject {
     @Published private var game: ConcentrationGame<String>
     
-    private var player = SoundPlayer()
+    var player = SoundPlayer()
     private let defaults = UserDefaults.standard
     static var gameThemes: [Theme] = []
     

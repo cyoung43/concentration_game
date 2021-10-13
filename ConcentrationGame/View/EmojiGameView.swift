@@ -18,8 +18,20 @@ struct EmojiGameView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            deckBody
-            gameBody
+            if emojiGame.gameIsOver {
+                VStack {
+                    Spacer()
+                    userWon
+                    ZStack {
+                        deckBody
+                        gameBody
+                    }
+                }
+            }
+            else {
+                deckBody
+                gameBody
+            }
         }
         .edgesIgnoringSafeArea(.bottom)
         .navigationTitle("Score: \(emojiGame.score)")
@@ -77,7 +89,6 @@ struct EmojiGameView: View {
         GeometryReader { geometry in
             AspectVGrid(items: emojiGame.cards, aspectRatio: CardConstants.aspectRatio) { card in
                 if !isUndealt(card) {
-                    // TO DO: add in theme: emojiGame.theme
                     CardView(card: card, theme: emojiGame.theme)
                         .zIndex(zIndex(for: card))
                         .matchedGeometryEffect(id: card.id, in: dealingCards)
@@ -100,8 +111,12 @@ struct EmojiGameView: View {
         VStack {
             Text("You win!")
                 .font(.largeTitle.bold())
-            Spacer()
-            Text("Your score: \(emojiGame.score)")
+                .scaleEffect(isTextMaxSize ? maxSize : 1)
+                .onAppear {
+                    withAnimation(CardConstants.animation, {
+                        isTextMaxSize.toggle()
+                    })
+                }
         }
         
     }
@@ -135,6 +150,7 @@ struct EmojiGameView: View {
         static let deckHeight: CGFloat = 150
         static let dealDuration = 0.5
         static let totalDealDuration = 2.0
+        static let animation = Animation.easeInOut(duration: 1).repeatForever(autoreverses: true)
     }
 }
 
