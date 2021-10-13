@@ -15,6 +15,8 @@ class EmojiConcentrationGame: ObservableObject {
     private let defaults = UserDefaults.standard
     static var gameThemes: [Theme] = []
     
+    var hasDealt: Bool = false
+    
     init(_ theme: [String]) {
         game = EmojiConcentrationGame.createGame(theme: theme)
     }
@@ -81,10 +83,17 @@ class EmojiConcentrationGame: ObservableObject {
     
     func newGame() -> Void {
         game = EmojiConcentrationGame.createGame(theme: game.theme)
+        hasDealt = false
     }
     
     func gameOver() {
         game.gameOver = true
+    }
+    
+    func turnFaceDown(_ card: ConcentrationGame<String>.Card) {
+        if card.isMatched {
+            game.turnFaceDown(card)
+        }
     }
     
     private func convertColor(from color: String) -> Color {

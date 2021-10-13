@@ -30,6 +30,17 @@ struct EmojiGameView: View {
             }
         }
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            if emojiGame.hasDealt {
+                for card in emojiGame.cards {
+                    deal(card)
+                    
+                    if card.isMatched {
+                        emojiGame.turnFaceDown(card)
+                    }
+                }
+            }
+        }
     }
     
     var deckBody: some View {
@@ -52,6 +63,8 @@ struct EmojiGameView: View {
                     deal(card)
                 }
             }
+            
+            emojiGame.hasDealt = true
         }
     }
     

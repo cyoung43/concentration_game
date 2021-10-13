@@ -68,6 +68,13 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         }
     }
     
+    mutating func turnFaceDown(_ card: Card) {
+        if let chosenIndex = cards.firstIndex(matching: card),
+           cards[chosenIndex].isMatched {
+            cards[chosenIndex].isFaceUp = false
+        }
+    }
+    
     mutating func isGameStillGoing(gameType theme: String) {
         let check = cards.allSatisfy { $0.isMatched }
         
