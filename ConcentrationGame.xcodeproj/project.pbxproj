@@ -20,7 +20,6 @@
 		B27B41A326EC3DD900DA34EF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B41A226EC3DD900DA34EF /* CardView.swift */; };
 		B27B41A526EC439500DA34EF /* ArrayIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */; };
 		B2C13ED426FFEA2F000A14C1 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED326FFEA2F000A14C1 /* Theme.swift */; };
-		B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13ED72703781D000A14C1 /* Welcome.swift */; };
 		B2C13EE2270BE11F000A14C1 /* GameNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */; };
 		B2C13EE4270BE181000A14C1 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C13EE3270BE181000A14C1 /* GameMode.swift */; };
 		B2C13EE6270CC4CB000A14C1 /* temple_pics_concentration in Resources */ = {isa = PBXBuildFile; fileRef = B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */; };
@@ -55,7 +54,6 @@
 		B27B41A226EC3DD900DA34EF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B27B41A426EC439500DA34EF /* ArrayIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayIdentifiable.swift; sourceTree = "<group>"; };
 		B2C13ED326FFEA2F000A14C1 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		B2C13ED72703781D000A14C1 /* Welcome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome.swift; sourceTree = "<group>"; };
 		B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameNavigation.swift; path = "../../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/GameNavigation.swift"; sourceTree = "<group>"; };
 		B2C13EE3270BE181000A14C1 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
 		B2C13EE5270CC4CB000A14C1 /* temple_pics_concentration */ = {isa = PBXFileReference; lastKnownFileType = folder; name = temple_pics_concentration; path = ../../../../../../../Downloads/temple_pics_concentration; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 				B2C13EE1270BE11F000A14C1 /* GameNavigation.swift */,
 				B24DC8F626FB791A0064FD28 /* Cardify.swift */,
 				B254A29A26FF95970052641E /* AspectVGrid.swift */,
-				B2C13ED72703781D000A14C1 /* Welcome.swift */,
 				B2C13EE3270BE181000A14C1 /* GameMode.swift */,
 				B2C13F01270CE008000A14C1 /* GameSettings.swift */,
 				B2C13F03270CFB08000A14C1 /* Triangle.swift */,
@@ -333,7 +330,6 @@
 				B2C13EE4270BE181000A14C1 /* GameMode.swift in Sources */,
 				B2C13EE2270BE11F000A14C1 /* GameNavigation.swift in Sources */,
 				B24DC8F526FADABB0064FD28 /* ArrayOnly.swift in Sources */,
-				B2C13ED82703781D000A14C1 /* Welcome.swift in Sources */,
 				B2C13F1C270F3866000A14C1 /* SoundPlayer.swift in Sources */,
 				B278BEAB26E98ACD00BA7893 /* EmojiGameView.swift in Sources */,
 				B255342B26FA962F00B8FE04 /* Pie.swift in Sources */,

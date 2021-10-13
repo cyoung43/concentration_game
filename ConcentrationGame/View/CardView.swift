@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TO DO: figure out how to pause timer animation once the match is made for temples
 struct CardView: View {
     var card: ConcentrationGame<String>.Card
     var theme: [String]
@@ -63,6 +62,8 @@ struct CardView: View {
         }
         .aspectRatio(2/3, contentMode: .fit)
     }
+    
+    // MARK: Functions
     
     @ViewBuilder
     private func cardBody(size: CGSize) -> some View {

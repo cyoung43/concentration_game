@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TO DO: Rename to rectangleAnimation
 struct SquareAnimation: View {
     var height: CGFloat
     var width: CGFloat

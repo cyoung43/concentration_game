@@ -27,6 +27,7 @@ struct Theme: Identifiable, Hashable {
     }
 }
 
+// MARK: Themes Array
 var themes = [
     Theme(
         name: "People",
@@ -112,7 +113,7 @@ var themes = [
 ]
 
 
-// TO DO: random color not working.... it's showing blue as a default
+// MARK: Helper Builder Functions For Random Theme
 private func createRandomContent() -> [String] {
     var content: [String] = []
     var i = 0
@@ -142,7 +143,7 @@ func buildRandom() -> Theme {
     return random
 }
 
-// helper variable to iterate through game types
+// MARK: Helper Theme To Iterate Through Navigation
 let gameModes: [HelperTheme] = [HelperTheme(gameType: .emojiMojo, name: "Emoji Mojo"), HelperTheme(gameType: .shapeScape, name: "Shape Scape"), HelperTheme(gameType: .templeMatch, name: "Temple Match")]
 
 struct HelperTheme: Identifiable, Hashable {

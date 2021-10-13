@@ -3,12 +3,13 @@
 //  EmojiConcentrationGame
 //
 //  Created by Chris Young on 9/8/21.
-//  View Model
+//
 
 import SwiftUI
 import Foundation
 
 class EmojiConcentrationGame: ObservableObject {
+    // MARK: Instance Variables
     @Published private var game: ConcentrationGame<String>
     
     var player = SoundPlayer()
@@ -96,6 +97,7 @@ class EmojiConcentrationGame: ObservableObject {
         }
     }
     
+    // MARK: ColorConverter
     private func convertColor(from color: String) -> Color {
         switch color {
             case "red":

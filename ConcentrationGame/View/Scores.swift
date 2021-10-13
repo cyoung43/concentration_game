@@ -29,6 +29,7 @@ struct Scores: View {
         .navigationBarTitleDisplayMode(.inline)
     }
     
+    // MARK: ViewBuilder Function
     @ViewBuilder
     func scoreBody(type: HelperTheme) -> some View {
         ForEach (themes) { theme in

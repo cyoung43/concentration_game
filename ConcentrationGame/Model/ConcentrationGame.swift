@@ -24,7 +24,7 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
     
     var gameOver: Bool = false
     
-    // TO DO: add in theme here to be added to the gametype
+    // MARK: Game Logic
     init(numberOfPairsOfCards: Int, theme: [String], cardContentFactory: (Int) -> CardContent) {
         
         cards = Array<Card>()
@@ -116,6 +116,7 @@ struct ConcentrationGame<CardContent> where CardContent: Equatable {
         }
     }
     
+    // MARK: Card Struct
     struct Card: Identifiable {
         var isFaceUp = false {
             didSet {

@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-// Need this view to show all cards at the same time on the screen
-// can now pass in functions/logic to this type now
-
 struct AspectVGrid<Item, ItemView>: View where Item: Identifiable, ItemView: View {
     var items: [Item]
     var aspectRatio: CGFloat
@@ -61,9 +58,3 @@ struct AspectVGrid<Item, ItemView>: View where Item: Identifiable, ItemView: Vie
     }
     
 }
-
-//struct AspectVGrid_Previews: PreviewProvider {
-//    static var previews: some View {
-//        AspectVGrid()
-//    }
-//}
