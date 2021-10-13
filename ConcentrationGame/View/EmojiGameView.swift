@@ -12,6 +12,9 @@ struct EmojiGameView: View {
     
     @State private var dealtCards = Set<UUID>()
     @Namespace private var dealingCards
+    @State private var isTextMaxSize = false
+    
+    private let maxSize: CGFloat = 2
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -42,6 +45,8 @@ struct EmojiGameView: View {
             }
         }
     }
+    
+    // MARK: Views
     
     var deckBody: some View {
         ZStack {
@@ -91,7 +96,17 @@ struct EmojiGameView: View {
         }
     }
     
-    // can include private functions here if I want to pass into the aspectVGrid
+    var userWon: some View {
+        VStack {
+            Text("You win!")
+                .font(.largeTitle.bold())
+            Spacer()
+            Text("Your score: \(emojiGame.score)")
+        }
+        
+    }
+    
+    // MARK: Functions
     private func isUndealt(_ card: ConcentrationGame<String>.Card) -> Bool {
         !dealtCards.contains(card.id)
     }
