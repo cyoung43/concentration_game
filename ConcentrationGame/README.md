@@ -1,0 +1,13 @@
+# Chris Young | Project 1 | IS 543
+I feel like I was pushed to learn a lot of new things and grow in an entire new style of coding during this project. I ended up doing a lot of things well. This included:   
+1. Animations! I ended up using the `scaleEffect()` for temple image animations after matching. I also implemented an animation for when the game is over and the user won. This animation displays "You won!", and the text shrinks and grows, also using a `scaleEffect()`. This was pretty interesting to learn how to use animation with text size. I learned how to better use `withAnimation { }` by doing this.
+2. On a similar vein, the custom countdown timer for the TempleMatch game. I used similar principles with the `PieAnimation` to create a filled Rectangle that shrinks in size as `BonusTimeRemaining` decreased.
+3. I also did well with building a Random theme when the user desires it. Though my solution was probably not the most elegant, I was able to create a new set of random emojis and also implement a new color scheme when the user selected a new instance of the Random Game. Everything was entirely random, which was very satisfying.
+4. Finally, I think I did a pretty decent job in "segmenting" my code. I utilized a lot of `var someView: some View { }` and `func anotherView() -> some View { } ` in my SwiftUI. I think this is a habit that I carried over from JavaScript that I think helps to organize my code and keep it cleaner than having one mega file with over a 1000 lines of code. 
+
+A couple of things that I struggled with:
+1. When I built in the shrinking rectangle as a timer, I was unable to get it to "stop" once the card was matched. This was how we ended up constructing the Pie animation -- it would end up "freezing" after the user matched the appropriate cards. I was unable to accomplish this though for the shrinking rectangle, so once a match was made, the rectangle disappeared.
+2. While I was able to implement a `buildRandom()` function when the user wanted it, I don't think that my process was very elegant. I ended up piecing together a temporary array of themes in the case of a "random" selection, then only access the newly constructed random themes from that array in order to build the function. This way, I could consistently generate new emoji images and colors.
+
+I think that if I was to do this project again, I would focus on those two areas: the shrinking rectangle countdown animation and my `buildRandom()` function and try to improve them.
+Besides those, I feel like I did very well in this project -- and I was able to complete a large portion of it on my own with just a couple of tips from in class.
